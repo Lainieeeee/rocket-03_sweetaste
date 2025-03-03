@@ -1,0 +1,70 @@
+/*====================================================
+font
+====================================================*/
+@mixin font-face($name, $file, $weight) {
+    @font-face {
+      font-family: $name;
+      src: url('../fonts/PingFang-Fonts-master/' + $file + '.ttf') format('truetype'),
+           url('../fonts/helvetica-neue-5/' + $file + '.otf') format('opentype'),
+           url('../fonts/times/' + $file + '.ttf') format('truetype');
+      font-weight: $weight;
+      font-style: normal;
+    }
+}
+
+// PingFang
+@include font-face('PingFangSC', 'PingFang ExtraLight', 200);
+@include font-face('PingFangSC', 'PingFang Light', 300);
+@include font-face('PingFangSC', 'PingFang Regular', 400);
+@include font-face('PingFangSC', 'PingFang Medium', 500);
+@include font-face('PingFangSC', 'PingFang Bold', 700);
+@include font-face('PingFangSC', 'PingFang Heavy', 900);
+@mixin fontPingFang {
+    font-family: 'PingFangSC';
+}
+
+// HelveticaNeue
+@include font-face('Helvetica Neue', 'HelveticaNeueMedium', 400);
+@mixin fontHelveticaNeue {
+    font-family: 'Helvetica Neue';
+}
+
+// Times
+@include font-face('Times', 'TimesLTStd-Roman', 400);
+@mixin fontTimes {
+    font-family: 'Times';
+}
+
+/*====================================================
+Breakpoints
+====================================================*/
+@mixin xs {
+    @media screen and (max-width: 374.98px) {
+        @content;
+    }
+}
+@mixin sm {
+    @media screen and (max-width: 575.98px) {
+        @content;
+    }
+}
+@mixin md {
+    @media screen and (max-width: 767.98px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media screen and (max-width: 991.98px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media screen and (max-width: 1199.98px) {
+        @content;
+    }
+}
+@mixin xxl {
+    @media screen and (max-width: 1399.98px) {
+        @content;
+    }
+}

@@ -1,0 +1,51 @@
+/*====================================================
+custom color
+====================================================*/
+// $dark:        #3F5D45;
+// $gray:        #8DA291;
+// $gray-light:  #EAF0ED;
+// $white:       #ffffff;
+// $yellow:      #FFE180;
+
+/*====================================================
+settings
+====================================================*/
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+}
+html {
+  font-size: 62.5%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  @include fontPingFang;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: $dark;
+  font-weight: normal;
+}
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+::-moz-selection {
+  background: $dark;
+  color: $white;
+}
+::selection {
+  background: $dark;
+  color: $white;
+}
+
+
+.fontHelveticaNeue{
+  @include fontHelveticaNeue;
+}
+.fontTimes{
+  @include fontTimes;
+}
