@@ -24,7 +24,7 @@ body {
   @include fontPingFang;
   font-size: 1.6rem;
   line-height: 1.5;
-  color: $dark;
+  color: $black;
   font-weight: normal;
 }
 img {
@@ -41,6 +41,13 @@ img {
   background: $dark;
   color: $white;
 }
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
+ol,ul,li{
+  margin: 0;
+  padding: 0;
+}
 
 
 .fontHelveticaNeue{
@@ -48,4 +55,10 @@ img {
 }
 .fontTimes{
   @include fontTimes;
+}
+.detailInner {
+  padding: 10rem 2rem;
+  @include md{
+    padding: 5rem 2rem;
+  }
 }

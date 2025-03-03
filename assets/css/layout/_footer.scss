@@ -1,0 +1,74 @@
+footer{
+    .logoIcon{
+        img{
+            width: 4rem;
+            height: auto;
+        }
+    }
+    .emailForm{
+        .form-group{
+            label{
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+        input[type="email"]{
+            margin: 0;
+            padding: 0.8rem 6.3rem 0.8rem 4.3rem !important;
+            width: 100%;
+            background: $light;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            font-size: 1.6rem!important;
+            color: $black;
+            min-height: 44px;
+            border-color: $light;
+            @include fontPingFang;
+            &:focus{
+                border-color: $light;
+                color: $black;
+                background-color: $light;
+                box-shadow: initial;
+            }
+        }
+        .submitBtn{
+            height: 44px;
+        }
+    }
+    .footerSns{
+        div{
+            a{
+                img{
+                    width: 3.2rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .footerLogo{
+        img{
+            width: 170px;
+            height: auto;
+        }
+    }
+    .footerInfo{
+        li{
+            a{
+                text-decoration: none;
+                color: $black;
+                transition: 0.3s;
+                &:hover{
+                    color: $dark;
+                }
+            }
+        }
+    }
+    .textImg{
+        img{
+            width: 60px;
+            height: auto;
+        }
+    }
+}

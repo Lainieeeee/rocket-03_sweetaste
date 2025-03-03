@@ -12190,7 +12190,7 @@ body {
   font-family: "PingFangSC";
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #8DA291;
+  color: #3F5D45;
   font-weight: normal;
 }
 
@@ -12211,10 +12211,141 @@ img {
   color: #fff;
 }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
+  margin: 0;
+}
+
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 .fontHelveticaNeue {
   font-family: "Helvetica Neue";
 }
 
 .fontTimes {
   font-family: "Times";
+}
+
+.detailInner {
+  padding: 10rem 2rem;
+}
+@media screen and (max-width: 767.98px) {
+  .detailInner {
+    padding: 5rem 2rem;
+  }
+}
+
+header .headerLogo a img {
+  width: 250px;
+  height: auto;
+}
+@media screen and (max-width: 767.98px) {
+  header .headerLogo a img {
+    width: 120px;
+  }
+}
+header #navbarNav li a {
+  color: #3F5D45;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767.98px) {
+  header #navbarNav li a:hover {
+    background-color: #3F5D45;
+    color: #fff;
+  }
+}
+header .cartBtn {
+  top: 3rem;
+  right: 2rem;
+}
+header .navbar-toggler .hamburgerMenu {
+  position: relative;
+  width: 3.1rem;
+  height: 3.1rem;
+}
+header .navbar-toggler .hamburgerMenu span {
+  display: inline-block;
+  position: absolute;
+  background: #3F5D45;
+  left: 0.2rem;
+  width: 2.7rem;
+  height: 0.2rem;
+  transition: all 0.4s;
+}
+header .navbar-toggler .hamburgerMenu span:nth-of-type(1) {
+  top: 0.4rem;
+}
+header .navbar-toggler .hamburgerMenu span:nth-of-type(2) {
+  top: 1.4rem;
+}
+header .navbar-toggler .hamburgerMenu span:nth-of-type(3) {
+  top: 2.4rem;
+}
+header .navbar-toggler[aria-expanded=true] .hamburgerMenu span:nth-of-type(1) {
+  top: 0.8rem;
+  left: 0.2rem;
+  transform: translateY(6px) rotate(-45deg);
+}
+header .navbar-toggler[aria-expanded=true] .hamburgerMenu span:nth-of-type(2) {
+  opacity: 0;
+}
+header .navbar-toggler[aria-expanded=true] .hamburgerMenu span:nth-of-type(3) {
+  top: 2rem;
+  left: 0.2rem;
+  transform: translateY(-6px) rotate(45deg);
+}
+
+footer .logoIcon img {
+  width: 4rem;
+  height: auto;
+}
+footer .emailForm .form-group label {
+  top: 1rem;
+  left: 1rem;
+}
+footer .emailForm input[type=email] {
+  margin: 0;
+  padding: 0.8rem 6.3rem 0.8rem 4.3rem !important;
+  width: 100%;
+  background: #EAF0ED;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 1.6rem !important;
+  color: #3F5D45;
+  min-height: 44px;
+  border-color: #EAF0ED;
+  font-family: "PingFangSC";
+}
+footer .emailForm input[type=email]:focus {
+  border-color: #EAF0ED;
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  box-shadow: initial;
+}
+footer .emailForm .submitBtn {
+  height: 44px;
+}
+footer .footerSns div a img {
+  width: 3.2rem;
+  height: auto;
+}
+footer .footerLogo img {
+  width: 170px;
+  height: auto;
+}
+footer .footerInfo li a {
+  text-decoration: none;
+  color: #3F5D45;
+  transition: 0.3s;
+}
+footer .footerInfo li a:hover {
+  color: #8DA291;
+}
+footer .textImg img {
+  width: 60px;
+  height: auto;
 }/*# sourceMappingURL=all.css.map */
