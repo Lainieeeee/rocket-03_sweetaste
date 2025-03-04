@@ -10,6 +10,8 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- google icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!-- fontawsome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- ico -->
     <link rel="shortcut icon" href="assets/images/common/favicon.ico">
     <link rel="apple-touch-icon" href="assets/images/common/favicon.webp">
@@ -17,8 +19,9 @@
     <title>首頁 | sweetaste</title>
 </head>
 <body>
+
     <!-- header -->
-    <header class="bg-light position-fixed top-0 start-0 w-100">
+    <header class="bg-white position-fixed top-0 start-0 w-100">
         <div class="container-md mx-auto detailInner py-5">
             <nav class="navbar navbar-expand-md navbar-light p-0">
                 <!-- button -->
@@ -48,7 +51,7 @@
                         </li>
                         <li class="nav-item px-md-4 px-lg-5 d-none d-md-block">
                             <a class="nav-link lh-1" href="cart.html">
-                                <span class="material-symbols-outlined">shopping_cart</span>
+                                <i class="fa-solid fa-cart-shopping fs-2"></i>
                             </a>
                         </li>
                     </ul>
@@ -56,20 +59,190 @@
                 <!-- cartBtn -->
                 <div class="cartBtn d-md-none position-fixed">
                     <a class="nav-link lh-1" href="cart.html">
-                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <i class="fa-solid fa-cart-shopping fs-1"></i>
                     </a>
                 </div>
             </nav>
         </div>
     </header>
+    <!-- 確保header的高度空間 -->
     <div class="d-none d-md-block" style="height: 118.73px;"></div>
     <div class="d-block d-md-none" style="height: 91.55px;"></div>
+
     <!-- main -->
     <main>
+        <!-- 首圖 -->
+        <div class="container-md detailInner pt-0 z-0">
+            <div class="imageTrimmingHorizontal z-n1">
+                <img src="./assets/images/top/mainvisual.webp" alt="首頁圖">
+            </div>
+            <ul class="topPracticeNav row justify-content-center fs-1 fw-bold">
+                <li class="col-4 col-lg-3 p-0 yellow">
+                    <a href="" class="text-decoration-none d-block position-relative z-0">
+                        <div class="img imageTrimmingSquare">
+                            <img src="./assets/images/top/img-1.webp" alt="本日精選" loading="lazy">
+                        </div>
+                        <div class="text position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center z-1">
+                            <p class="vertical spacing-2 text-black">本日精選</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-4 col-lg-3 p-0 border-start border-white">
+                    <a href="" class="text-decoration-none d-block position-relative z-0">
+                        <div class="img imageTrimmingSquare">
+                            <img src="./assets/images/top/img-2.webp" alt="人氣推薦" loading="lazy">
+                        </div>
+                        <div class="text position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center z-1">
+                            <p class="vertical spacing-2 text-white">人氣推薦</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-4 col-lg-3 p-0 border-start border-white">
+                    <a href="" class="text-decoration-none d-block position-relative z-0">
+                        <div class="img imageTrimmingSquare">
+                            <img src="./assets/images/top/img-3.webp" alt="新品上市" loading="lazy">
+                        </div>
+                        <div class="text position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center z-1">
+                            <p class="vertical spacing-2 text-white">新品上市</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 為什麼 -->
+        <div class="topBg">
+            <div class="container-md detailInner row justify-content-between mx-auto px-0 px-md-5">
+                <div class="col-6 col-xl-2 textImg text-center mx-auto mb-5 mb-xl-0 text-xl-end order-xl-2">
+                    <picture>
+                        <source srcset="./assets/images/top/text-1.webp" media="(min-width: 1200px)" type="image/webp">
+                        <img src="./assets/images/top/text-1-sp.webp" alt="為什麼選擇了做甜點?" loading="lazy">
+                    </picture>
+                </div>
+                <div class="col-xl-10 row justify-content-between align-items-center order-xl-1 m-auto p-0">
+                    <div class="col-xl-7 p-0">
+                        <div class="imageTrimmingSquare">
+                            <img src="./assets/images/top/img-4.webp" alt="商品圖" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 bg-light p-5 p-xl-0">
+                        <p class="vertical text-dark fs-2 w-100">
+                            青山依舊在，幾度夕陽紅。慣看秋月春風。<br>
+                            一壺濁酒喜相逢，浪花淘盡英雄。是非<br class="d-none d-xl-block">
+                            成敗轉頭空，滾滾長江東逝水，白髮漁樵江<br class="d-none d-xl-block">
+                            渚上，古今多少事，都付笑談中。<br class="d-none d-xl-block"><br>
+                            是非成敗轉頭空，滾滾長江東逝水，白<br class="d-none d-xl-block">
+                            髮漁樵江渚上，古今多少事，都付笑談中。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 為什麼 -->
+        <div class="topBg">
+            <div class="container-md detailInner row justify-content-between mx-auto px-0 px-md-5">
+                <div class="col-6 col-xl-2 textImg mx-auto mb-5 mb-xl-0 order-xl-1">
+                    <picture>
+                        <source srcset="./assets/images/top/text-2.webp" media="(min-width: 1200px)" type="image/webp">
+                        <img src="./assets/images/top/text-2-sp.webp" alt="為什麼一定要吃甜點?" loading="lazy">
+                    </picture>
+                </div>
+                <div class="col-xl-10 row justify-content-between align-items-center order-xl-2 m-auto p-0">
+                    <div class="col-xl-7 p-0 order-xl-2">
+                        <div class="imageTrimmingSquare">
+                            <img src="./assets/images/top/img-5.webp" alt="商品圖" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 bg-light p-5 p-xl-0 order-xl-1">
+                        <p class="vertical text-dark fs-2">
+                            青山依舊在，幾度夕陽紅。慣看秋月春風。<br>
+                            一壺濁酒喜相逢，浪花淘盡英雄。是非<br class="d-none d-xl-block">
+                            成敗轉頭空，滾滾長江東逝水，白髮漁樵江<br class="d-none d-xl-block">
+                            渚上，古今多少事，都付笑談中。<br class="d-none d-xl-block"><br>
+                            是非成敗轉頭空，滾滾長江東逝水，白<br class="d-none d-xl-block">
+                            髮漁樵江渚上，古今多少事，都付笑談中。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 文章區 -->
+        <div class="col-7 col-md-2 mx-auto detailInner text-center">
+            <picture>
+                <!-- 768px～ -->
+                <source srcset="./assets/images/top/text-3.webp" media="(min-width: 768px)" type="image/webp">
+                <!-- ～767px -->
+                <img src="./assets/images/top/text-3-sp.webp" alt="想吃甜點是不需要理由的。" loading="lazy">
+            </picture>
+        </div>
+        <!-- 商品區 -->
         <div class="container-md detailInner">
-            <img src="https://placehold.jp/150x1500.png" alt="">
+            <!-- topProductsSlider -->
+            <section class="splide" id="topProductsSlider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <article class="productsArticle">
+                                <div class="position-relative z-0">
+                                    <p class="vertical bg-black text-white p-3 position-absolute top-0 z-1 fw-bold spacing-1 ribbon">本日精選</p>
+                                    <button class="favoriteIcon position-absolute z-1 btn fs-1">
+                                        <i class="fa-solid fa-heart text-black"></i>
+                                        <i class="fa-regular fa-heart text-black d-none"></i>
+                                    </button>
+                                    <div class="imageTrimmingSquare">
+                                        <img src="./assets/images/products/img-1.webp" alt="焦糖馬卡龍">
+                                    </div>
+                                </div>
+                                <div class="row border border-gray border-top-0 border-bottom-0 m-0">
+                                    <p class="col-6 p-3 text-center fs-1 name">焦糖馬卡龍</p>
+                                    <p class="col-6 p-3 text-center fs-1 fw-bold border-start border-gray price">NT$ 450</p>
+                                </div>
+                                <button type="submit" class="btn fs-1 w-100 bg-light fw-bold text-black p-4">加入購物車</button>
+                            </article>
+                        </li>
+                        <li class="splide__slide">
+                            <article class="productsArticle">
+                                <div class="position-relative z-0">
+                                    <p class="vertical bg-black text-white p-3 position-absolute top-0 z-1 fw-bold spacing-1 ribbon">本日精選</p>
+                                    <button class="favoriteIcon position-absolute z-1 btn fs-1">
+                                        <i class="fa-solid fa-heart text-black d-none"></i>
+                                        <i class="fa-regular fa-heart text-black"></i>
+                                    </button>
+                                    <div class="imageTrimmingSquare">
+                                        <img src="./assets/images/products/img-2.webp" alt="焦糖馬卡龍">
+                                    </div>
+                                </div>
+                                <div class="row border border-gray border-top-0 border-bottom-0 m-0">
+                                    <p class="col-6 p-3 text-center fs-1 name">焦糖馬卡龍</p>
+                                    <p class="col-6 p-3 text-center fs-1 fw-bold border-start border-gray price">NT$ 450</p>
+                                </div>
+                                <button type="submit" class="btn fs-1 w-100 bg-light fw-bold text-black p-4">加入購物車</button>
+                            </article>
+                        </li>
+                        <li class="splide__slide">
+                            <article class="productsArticle">
+                                <div class="position-relative z-0">
+                                    <p class="vertical bg-black text-white p-3 position-absolute top-0 z-1 fw-bold spacing-1 ribbon">本日精選</p>
+                                    <button class="favoriteIcon position-absolute z-1 btn fs-1">
+                                        <i class="fa-solid fa-heart text-black d-none"></i>
+                                        <i class="fa-regular fa-heart text-black"></i>
+                                    </button>
+                                    <div class="imageTrimmingSquare">
+                                        <img src="./assets/images/products/img-3.webp" alt="焦糖馬卡龍">
+                                    </div>
+                                </div>
+                                <div class="row border border-gray border-top-0 border-bottom-0 m-0">
+                                    <p class="col-6 p-3 text-center fs-1 name">焦糖馬卡龍</p>
+                                    <p class="col-6 p-3 text-center fs-1 fw-bold border-start border-gray price">NT$ 450</p>
+                                </div>
+                                <button type="submit" class="btn fs-1 w-100 bg-light fw-bold text-black p-4">加入購物車</button>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </main>
+
     <!-- footer -->
     <footer>
         <div class="bg-black text-white">
@@ -78,19 +251,19 @@
                     <div class="logoIcon">
                         <img src="./assets/images/common/logo-light.svg" alt="Logo圖" loading="lazy">
                     </div>
-                    <p class="fontHelveticaNeue fs-1 ps-3">訂閱你我的甜蜜郵件</p>
+                    <p class="fontHelveticaNeue fs-1 ps-4">訂閱你我的甜蜜郵件</p>
                 </div>
                 <form class="col-md-6 col-xl-4 position-relative emailForm mt-4 mt-md-0 ms-auto p-0">
                     <div class="form-group position-relative">
                         <label for="exampleInputEmail1" class="position-absolute">
-                            <span class="material-symbols-outlined text-black">mail</span>
+                            <i class="fa-regular fa-envelope text-black fs-2"></i>
                         </label>
                         <input type="email" class="form-control rounded-0" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
                     <button type="submit"
                         class="btn btn-warning fs-3 lh-1 px-4 rounded-0 position-absolute top-0 end-0 submitBtn">
-                        <span class="material-symbols-outlined">arrow_forward</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </form>
             </div>
@@ -140,5 +313,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- js -->
+    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="./assets/js/top.js"></script>
+
 </body>
 </html>

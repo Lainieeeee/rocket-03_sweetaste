@@ -1,0 +1,16 @@
+.productsArticle{
+    .ribbon{
+        left: 1rem;
+    }
+    .favoriteIcon{
+        top: 1rem;
+        right: 1rem;
+    }
+    .name,.price{
+        @include line-clamp(1); // 文字最多顯示1排
+        line-height: 2;
+    }
+    .productsImg{
+        
+    }
+}

@@ -1,75 +1,80 @@
 header{
-    .headerLogo{
-        a{
-            img{
-                width: 250px;
-                height: auto;
-                @include md{
-                    width: 120px;
-                }
-            }
+  z-index: 9999;
+  &:has(.navbar-collapse.show) {
+    box-shadow: 0px 3px 10px 0px rgba($black,0.5);
+    transition: 0.3s;
+  }
+  .headerLogo{
+      a{
+          img{
+              width: 250px;
+              height: auto;
+              @include md{
+                  width: 120px;
+              }
+          }
+      }
+  }
+  #navbarNav{
+      li{
+          a{
+              color: $black;
+              transition: 0.3s;
+              @include md {
+                  &:hover{
+                      background-color: $black;
+                      color: $white;
+                  }
+              }
+          }
+      }
+  }
+  .cartBtn{
+    top: 3.5rem;
+    right: 2rem;
+  }
+  .navbar-toggler{
+      .hamburgerMenu {
+        position: relative;
+        width: 3.1rem;
+        height: 3.1rem;
+        span {
+          display: inline-block;
+          position: absolute;
+          background: $black;
+          left: 0.2rem;
+          width: 2.7rem;
+          height: 0.2rem;
+          transition: all 0.4s;
+          &:nth-of-type(1) {
+            top: 0.4rem;
+          }
+          &:nth-of-type(2) {
+            top: 1.4rem;
+          }
+          &:nth-of-type(3) {
+            top: 2.4rem;
+          }
         }
-    }
-    #navbarNav{
-        li{
-            a{
-                color: $black;
-                transition: 0.3s;
-                @include md {
-                    &:hover{
-                        background-color: $black;
-                        color: $white;
-                    }
-                }
-            }
-        }
-    }
-    .cartBtn{
-        top: 3rem;
-        right: 2rem;
-    }
-    .navbar-toggler{
+      }
+      &[aria-expanded="true"]{
         .hamburgerMenu {
-          position: relative;
-          width: 3.1rem;
-          height: 3.1rem;
-          span {
-            display: inline-block;
-            position: absolute;
-            background: $black;
-            left: 0.2rem;
-            width: 2.7rem;
-            height: 0.2rem;
-            transition: all 0.4s;
+          span{
             &:nth-of-type(1) {
-              top: 0.4rem;
+              top: 0.8rem;
+              left: 0.2rem;
+              transform: translateY(6px) rotate(-45deg);
             }
             &:nth-of-type(2) {
-              top: 1.4rem;
+              opacity: 0;
             }
             &:nth-of-type(3) {
-              top: 2.4rem;
+              top: 2rem;
+              left: 0.2rem;
+              transform: translateY(-6px) rotate(45deg);
             }
           }
         }
-        &[aria-expanded="true"]{
-          .hamburgerMenu {
-            span{
-              &:nth-of-type(1) {
-                top: 0.8rem;
-                left: 0.2rem;
-                transform: translateY(6px) rotate(-45deg);
-              }
-              &:nth-of-type(2) {
-                opacity: 0;
-              }
-              &:nth-of-type(3) {
-                top: 2rem;
-                left: 0.2rem;
-                transform: translateY(-6px) rotate(45deg);
-              }
-            }
-          }
-        }
-    }
+      }
+  }
 }

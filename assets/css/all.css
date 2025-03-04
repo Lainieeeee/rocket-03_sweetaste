@@ -3,6 +3,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import "../../node_modules/@splidejs/splide/dist/css/splide-core.min.css";
+@import "../../node_modules/@splidejs/splide/dist/css/themes/splide-default.min.css";
 html, body, div, span, applet, object, iframe,
 h1,
 .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, blockquote, pre,
@@ -108,6 +110,9 @@ font
 }
 /*====================================================
 Breakpoints
+====================================================*/
+/*====================================================
+Placeholder(佔位符)
 ====================================================*/
 /*!
  * Bootstrap  v5.3.0 (https://getbootstrap.com/)
@@ -12237,6 +12242,65 @@ ol, ul, li {
   }
 }
 
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+.spacing-1 {
+  letter-spacing: 0.5rem;
+}
+
+.spacing-2 {
+  letter-spacing: 1rem;
+}
+
+.productsArticle .ribbon {
+  left: 1rem;
+}
+.productsArticle .favoriteIcon {
+  top: 1rem;
+  right: 1rem;
+}
+.productsArticle .name, .productsArticle .price {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  line-height: 2;
+}
+.imageTrimmingSquare, .imageTrimmingVertical, .imageTrimmingHorizontal {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.imageTrimmingSquare img, .imageTrimmingVertical img, .imageTrimmingHorizontal img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
+.imageTrimmingSquare {
+  padding-top: 100%;
+}
+
+.imageTrimmingVertical {
+  padding-top: 120%;
+}
+
+.imageTrimmingHorizontal {
+  padding-top: 80%;
+}
+
+header {
+  z-index: 9999;
+}
+header:has(.navbar-collapse.show) {
+  box-shadow: 0px 3px 10px 0px rgba(63, 93, 69, 0.5);
+  transition: 0.3s;
+}
 header .headerLogo a img {
   width: 250px;
   height: auto;
@@ -12257,7 +12321,7 @@ header #navbarNav li a {
   }
 }
 header .cartBtn {
-  top: 3rem;
+  top: 3.5rem;
   right: 2rem;
 }
 header .navbar-toggler .hamburgerMenu {
@@ -12348,4 +12412,90 @@ footer .footerInfo li a:hover {
 footer .textImg img {
   width: 60px;
   height: auto;
+}
+
+.topPracticeNav {
+  margin-top: -10rem;
+}
+@media screen and (max-width: 767.98px) {
+  .topPracticeNav {
+    margin-top: 0;
+  }
+}
+.topPracticeNav li a .img img {
+  filter: blur(4px);
+}
+@media screen and (max-width: 767.98px) {
+  .topPracticeNav li a .img {
+    padding-top: 140%;
+  }
+}
+.topPracticeNav li a:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: #3F5D45;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.8;
+  transition: 0.7s;
+}
+.topPracticeNav li a:hover:before {
+  opacity: 0.95;
+}
+.topPracticeNav li.yellow a:before {
+  background-color: #FFE180;
+}
+
+.topBg {
+  background-color: #EAF0ED;
+  position: relative;
+  z-index: 0;
+}
+.topBg:before, .topBg:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 13rem;
+  background-color: #fff;
+  left: 0;
+  z-index: -1;
+}
+.topBg:before {
+  top: 0;
+}
+.topBg:after {
+  bottom: 0;
+}
+.topBg .textImg img {
+  max-width: 12rem;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1199.98px) {
+  .topBg .textImg img {
+    max-width: 38rem;
+  }
+}
+.topBg .vertical {
+  line-height: 2.5em;
+}
+@media screen and (max-width: 1199.98px) {
+  .topBg {
+    background-color: inherit;
+  }
+  .topBg:before, .topBg:after {
+    display: none;
+  }
+  .topBg .imageTrimmingSquare {
+    padding-top: 70%;
+  }
+  .topBg .vertical {
+    writing-mode: inherit;
+    line-height: 1.5;
+  }
 }/*# sourceMappingURL=all.css.map */

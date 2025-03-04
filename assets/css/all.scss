@@ -11,12 +11,19 @@
 // base
 @import "./base/common";
 
-// // components
-// // @import "./";
+// components
+@import "./components/product";
+@import "./components/imageTrimming";
 
 // layout
 @import "./layout/header";
 @import "./layout/footer";
 
-// // pages
-// @import "./pages/top";
+// pages
+@import "./pages/top";
+
+
+
+// vendors
+@import "../../node_modules/@splidejs/splide/dist/css/splide-core.min.css";
+@import "../../node_modules/@splidejs/splide/dist/css/themes/splide-default.min.css";
