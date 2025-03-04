@@ -62,49 +62,49 @@ font
 ====================================================*/
 @font-face {
   font-family: "PingFangSC";
-  src: url("../fonts/PingFang-Fonts-master/PingFang ExtraLight.ttf") format("truetype"), url("../fonts/helvetica-neue-5/PingFang ExtraLight.otf") format("opentype"), url("../fonts/times/PingFang ExtraLight.ttf") format("truetype");
+  src: url("../fonts/PingFang-Fonts-master/PingFang ExtraLight.ttf") format("truetype"), url("../fonts/PingFang-Fonts-master/PingFang ExtraLight.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "PingFangSC";
-  src: url("../fonts/PingFang-Fonts-master/PingFang Light.ttf") format("truetype"), url("../fonts/helvetica-neue-5/PingFang Light.otf") format("opentype"), url("../fonts/times/PingFang Light.ttf") format("truetype");
+  src: url("../fonts/PingFang-Fonts-master/PingFang Light.ttf") format("truetype"), url("../fonts/PingFang-Fonts-master/PingFang Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "PingFangSC";
-  src: url("../fonts/PingFang-Fonts-master/PingFang Regular.ttf") format("truetype"), url("../fonts/helvetica-neue-5/PingFang Regular.otf") format("opentype"), url("../fonts/times/PingFang Regular.ttf") format("truetype");
+  src: url("../fonts/PingFang-Fonts-master/PingFang Regular.ttf") format("truetype"), url("../fonts/PingFang-Fonts-master/PingFang Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "PingFangSC";
-  src: url("../fonts/PingFang-Fonts-master/PingFang Medium.ttf") format("truetype"), url("../fonts/helvetica-neue-5/PingFang Medium.otf") format("opentype"), url("../fonts/times/PingFang Medium.ttf") format("truetype");
+  src: url("../fonts/PingFang-Fonts-master/PingFang Medium.ttf") format("truetype"), url("../fonts/PingFang-Fonts-master/PingFang Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "PingFangSC";
-  src: url("../fonts/PingFang-Fonts-master/PingFang Bold.ttf") format("truetype"), url("../fonts/helvetica-neue-5/PingFang Bold.otf") format("opentype"), url("../fonts/times/PingFang Bold.ttf") format("truetype");
+  src: url("../fonts/PingFang-Fonts-master/PingFang Bold.ttf") format("truetype"), url("../fonts/PingFang-Fonts-master/PingFang Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "PingFangSC";
-  src: url("../fonts/PingFang-Fonts-master/PingFang Heavy.ttf") format("truetype"), url("../fonts/helvetica-neue-5/PingFang Heavy.otf") format("opentype"), url("../fonts/times/PingFang Heavy.ttf") format("truetype");
+  src: url("../fonts/PingFang-Fonts-master/PingFang Heavy.ttf") format("truetype"), url("../fonts/PingFang-Fonts-master/PingFang Heavy.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("../fonts/PingFang-Fonts-master/HelveticaNeueMedium.ttf") format("truetype"), url("../fonts/helvetica-neue-5/HelveticaNeueMedium.otf") format("opentype"), url("../fonts/times/HelveticaNeueMedium.ttf") format("truetype");
+  src: url("../fonts/helvetica-neue-5/HelveticaNeueMedium.ttf") format("truetype"), url("../fonts/helvetica-neue-5/HelveticaNeueMedium.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Times";
-  src: url("../fonts/PingFang-Fonts-master/TimesLTStd-Roman.ttf") format("truetype"), url("../fonts/helvetica-neue-5/TimesLTStd-Roman.otf") format("opentype"), url("../fonts/times/TimesLTStd-Roman.ttf") format("truetype");
+  src: url("../fonts/times/TimesLTStd-Roman.ttf") format("truetype"), url("../fonts/times/TimesLTStd-Roman.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
@@ -12192,7 +12192,7 @@ html {
 }
 
 body {
-  font-family: "PingFangSC";
+  font-family: "PingFangSC", Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   color: #3F5D45;
@@ -12226,11 +12226,11 @@ ol, ul, li {
 }
 
 .fontHelveticaNeue {
-  font-family: "Helvetica Neue";
+  font-family: "Times", Arial, sans-serif;
 }
 
 .fontTimes {
-  font-family: "Times";
+  font-family: "Times", Arial, sans-serif;
 }
 
 .detailInner {
@@ -12304,6 +12304,18 @@ ol, ul, li {
   .imageTrimmingHorizontal-50 {
     padding-top: 120%;
   }
+}
+
+.pagination .page-item .page-link {
+  font-size: 2rem;
+  color: #3F5D45;
+  border: 1px solid #EAF0ED;
+  border-radius: 0;
+  padding: 1rem 2rem;
+}
+.pagination .page-item.active .page-link {
+  color: #fff;
+  background-color: #3F5D45;
 }
 
 header {
@@ -12394,7 +12406,7 @@ footer .emailForm input[type=email] {
   color: #3F5D45;
   min-height: 44px;
   border-color: #EAF0ED;
-  font-family: "PingFangSC";
+  font-family: "PingFangSC", Arial, sans-serif;
 }
 footer .emailForm input[type=email]:focus {
   border-color: #EAF0ED;

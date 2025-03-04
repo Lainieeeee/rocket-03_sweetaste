@@ -1,38 +1,37 @@
 /*====================================================
 font
 ====================================================*/
-@mixin font-face($name, $file, $weight) {
+@mixin font-face($family, $file, $weight, $format) {
     @font-face {
-      font-family: $name;
-      src:  url('../fonts/PingFang-Fonts-master/' + $file + '.ttf') format('truetype'),
-            url('../fonts/helvetica-neue-5/' + $file + '.otf') format('opentype'),
-            url('../fonts/times/' + $file + '.ttf') format('truetype');
+      font-family: $family;
+      src: url('../fonts/#{$file}.ttf') format('truetype'),
+           url('../fonts/#{$file}.otf') format($format);
       font-weight: $weight;
       font-style: normal;
     }
 }
 
-// PingFang
-@include font-face('PingFangSC', 'PingFang ExtraLight', 200);
-@include font-face('PingFangSC', 'PingFang Light', 300);
-@include font-face('PingFangSC', 'PingFang Regular', 400);
-@include font-face('PingFangSC', 'PingFang Medium', 500);
-@include font-face('PingFangSC', 'PingFang Bold', 700);
-@include font-face('PingFangSC', 'PingFang Heavy', 900);
+// PingFang Font Faces
+@include font-face('PingFangSC', 'PingFang-Fonts-master/PingFang ExtraLight', 200, 'opentype');
+@include font-face('PingFangSC', 'PingFang-Fonts-master/PingFang Light', 300, 'opentype');
+@include font-face('PingFangSC', 'PingFang-Fonts-master/PingFang Regular', 400, 'opentype');
+@include font-face('PingFangSC', 'PingFang-Fonts-master/PingFang Medium', 500, 'opentype');
+@include font-face('PingFangSC', 'PingFang-Fonts-master/PingFang Bold', 700, 'opentype');
+@include font-face('PingFangSC', 'PingFang-Fonts-master/PingFang Heavy', 900, 'opentype');
 @mixin fontPingFang {
-    font-family: 'PingFangSC';
+    font-family: 'PingFangSC', Arial, sans-serif;
 }
 
-// HelveticaNeue
-@include font-face('Helvetica Neue', 'HelveticaNeueMedium', 400);
+// Helvetica Neue Font Face
+@include font-face('Helvetica Neue', 'helvetica-neue-5/HelveticaNeueMedium', 400, 'opentype');
 @mixin fontHelveticaNeue {
-    font-family: 'Helvetica Neue';
+    font-family: 'Times', Arial, sans-serif;
 }
 
-// Times
-@include font-face('Times', 'TimesLTStd-Roman', 400);
+// Times Font Face
+@include font-face('Times', 'times/TimesLTStd-Roman', 400, 'opentype');
 @mixin fontTimes {
-    font-family: 'Times';
+    font-family: 'Times', Arial, sans-serif;
 }
 
 /*====================================================
