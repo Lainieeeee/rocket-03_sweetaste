@@ -5,12 +5,11 @@
     .favoriteIcon{
         top: 1rem;
         right: 1rem;
+        outline: initial;
+        border: initial;
     }
     .name,.price{
         @include line-clamp(1); // 文字最多顯示1排
         line-height: 2;
-    }
-    .productsImg{
-        
     }
 }

@@ -4,9 +4,9 @@ font
 @mixin font-face($name, $file, $weight) {
     @font-face {
       font-family: $name;
-      src: url('../fonts/PingFang-Fonts-master/' + $file + '.ttf') format('truetype'),
-           url('../fonts/helvetica-neue-5/' + $file + '.otf') format('opentype'),
-           url('../fonts/times/' + $file + '.ttf') format('truetype');
+      src:  url('../fonts/PingFang-Fonts-master/' + $file + '.ttf') format('truetype'),
+            url('../fonts/helvetica-neue-5/' + $file + '.otf') format('opentype'),
+            url('../fonts/times/' + $file + '.ttf') format('truetype');
       font-weight: $weight;
       font-style: normal;
     }

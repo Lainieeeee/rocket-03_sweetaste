@@ -12260,6 +12260,8 @@ ol, ul, li {
 .productsArticle .favoriteIcon {
   top: 1rem;
   right: 1rem;
+  outline: initial;
+  border: initial;
 }
 .productsArticle .name, .productsArticle .price {
   display: -webkit-box;
@@ -12268,6 +12270,7 @@ ol, ul, li {
   overflow: hidden;
   line-height: 2;
 }
+
 .imageTrimmingSquare, .imageTrimmingVertical, .imageTrimmingHorizontal {
   overflow: hidden;
   position: relative;
