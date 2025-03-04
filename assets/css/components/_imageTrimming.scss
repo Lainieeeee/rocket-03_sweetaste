@@ -1,4 +1,4 @@
-.imageTrimmingSquare,.imageTrimmingVertical,.imageTrimmingHorizontal{
+.imageTrimmingSquare,.imageTrimmingVertical,.imageTrimmingHorizontal,.imageTrimmingHorizontal-50{
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -25,4 +25,12 @@
 // 長方形
 .imageTrimmingHorizontal {
     padding-top: 80%;
+}
+
+// 長方形
+.imageTrimmingHorizontal-50 {
+    padding-top: 50%;
+    @include md{
+        padding-top: 120%;
+    }
 }
