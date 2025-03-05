@@ -1,0 +1,62 @@
+%setForm{
+    margin: 0;
+    padding: 8px !important;
+    width: 100%;
+    background: $light;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 1.6rem!important;
+    color: $black;
+    min-height: 56px;
+    border-color: $black;
+    @include fontPingFang;
+    border-radius: 0!important;
+}
+
+form{
+    label{
+        font-size: 1.6rem;
+    }
+    input{
+        &[type="text"],
+        &[type="password"],
+        &[type="checkbox"]{
+            @extend %setForm;
+            &::placeholder {
+                color: $dark !important;
+            }
+            &:focus{
+                border-color: $black;
+                color: $black;
+                background-color: $light;
+                box-shadow: 0 0 2px 2px $black;
+            }
+            &:-webkit-autofill{
+                box-shadow: 0 0 0 1000px $dark inset;
+                -webkit-text-fill-color: $black !important;
+            }
+        }
+        &[type="checkbox"] {
+            appearance: revert;
+            min-height: initial;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    .labelIcon{
+        position: relative;
+        z-index: 0;
+        label{
+            position: absolute;
+            top: 1.3rem;
+            left: 1.5rem;
+            z-index: 1;
+            font-size: 2rem;
+        }
+        input{
+            padding-left: 5rem!important;
+        }
+    }
+}

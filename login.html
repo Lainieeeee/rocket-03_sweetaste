@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <!-- js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.js"></script>
+    <!-- fontawsome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- ico -->
+    <link rel="shortcut icon" href="assets/images/common/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/common/favicon.webp">
+    <!-- title -->
+    <title>會員登入 | sweetaste</title>
+</head>
+<body>
+
+    <!-- header -->
+    <header class="bg-white position-fixed top-0 start-0 w-100">
+        <div class="container-md mx-auto detailInner py-5">
+            <nav class="navbar navbar-expand-md navbar-light p-0">
+                <!-- button -->
+                <button class="navbar-toggler p-0 border-0 shadow-none" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <div class="hamburgerMenu"><span></span><span></span><span></span></div>
+                </button>
+                <!-- headerLogo -->
+                <h1 class="headerLogo mx-auto">
+                    <a class="navbar-brand d-inline-block" href="index.html">
+                        <img src="./assets/images/common/logo-all-dark.svg" alt="sweetaste Logo" class="d-none d-md-block">
+                        <img src="./assets/images/common/logotype-lg-dark.svg" alt="sweetaste Logo" class="d-block d-md-none">
+                    </a>
+                </h1>
+                <!-- navbarNav -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center fw-bold d-block d-md-flex text-center text-md-end mt-5 mt-md-0">
+                        <li class="nav-item px-md-4 px-lg-5 mt-3 mt-md-0">
+                            <a class="nav-link w-100 d-md-block" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item px-md-4 px-lg-5 mt-3 mt-md-0">
+                            <a class="nav-link w-100 d-md-block" href="products.html">甜點</a>
+                        </li>
+                        <li class="nav-item px-md-4 px-lg-5 mt-3 mt-md-0">
+                            <a class="nav-link w-100 d-md-block" href="login.html">登入</a>
+                        </li>
+                        <li class="nav-item px-md-4 px-lg-5 d-none d-md-block">
+                            <a class="nav-link lh-1" href="cart.html">
+                                <i class="fa-solid fa-cart-shopping fs-2"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- cartBtn -->
+                <div class="cartBtn d-md-none position-fixed">
+                    <a class="nav-link lh-1" href="cart.html">
+                        <i class="fa-solid fa-cart-shopping fs-1"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- 確保header的高度空間 -->
+    <div class="d-none d-md-block" style="height: 118.73px;"></div>
+    <div class="d-block d-md-none" style="height: 91.55px;"></div>
+
+    <!-- main -->
+    <main>
+        <div class="container-md detailInner mx-auto row col-lg-10 col-xl-8 pt-0 px-0 px-md-5 pb-0 pb-md-5 mb-md-5 align-items-center">
+            <h2 class="display-3 fw-bold text-light text-center d-md-none bg-black p-5">會員登入</h2>
+            <div class="col-md-6 bg-light order-md-2 p-5 text-center">
+                <p class="loginTitle fs-1 text-dark mb-5 d-none d-md-block">
+                    <span class="bg-light px-4">連結社群帳號</span>
+                </p>
+                <ul class="row mx-auto loginSocial">
+                    <li class="col-4 col-md-12 mt-md-4 px-0 border-start border-light">
+                        <a href="" class="bg-white p-4 d-block"><img src="assets/images/member/yahoo.webp" alt="yahoo" width="150" height="50"></a>
+                    </li>
+                    <li class="col-4 col-md-12 mt-md-4 px-0 border-start border-light">
+                        <a href="" class="bg-white p-4 d-block"><img src="assets/images/member/google.webp" alt="google" width="150" height="50"></a>
+                    </li>
+                    <li class="col-4 col-md-12 mt-md-4 px-0 border-start border-light">
+                        <a href="" class="bg-white p-4 d-block"><img src="assets/images/member/facebook.webp" alt="facebook" width="150" height="50"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 order-md-1 p-0">
+                <form method="post" action="">
+                    <div class="bg-black p-5">
+                        <h2 class="display-3 fw-bold text-light text-center mb-4 d-none d-md-block mb-5 pb-md-5 pt-md-5">會員登入</h2>
+                        <div class="mb-4 labelIcon">
+                            <label for="exampleFormControlInput1" class="form-label m-0">
+                                <i class="fa-solid fa-user text-black"></i>
+                            </label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="電子信箱/手機號碼">
+                        </div>
+                        <div class="mb-4 labelIcon">
+                            <label for="inputPassword5" class="form-label m-0">
+                                <i class="fa-solid fa-key text-black"></i>
+                            </label>
+                            <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="請輸入使用者密碼">
+                        </div>
+                        <div class="mb-3 form-check d-flex justify-content-start align-items-center">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label text-white ps-3 fw-semibold cursor-pointer" for="exampleCheck1">記住我</label>
+                        </div>
+                    </div>
+                    <input type="submit" value="登入帳號" class="btn fs-1 btn-warning rounded-0 text-black text-center fw-semibold w-100 p-3">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="bg-black text-white">
+            <div class="container-md mx-auto detailInner row py-5">
+                <div class="col-md-6 d-flex justify-content-start align-items-center p-0">
+                    <div class="logoIcon">
+                        <img src="./assets/images/common/logo-light.svg" alt="Logo圖" loading="lazy">
+                    </div>
+                    <p class="fontHelveticaNeue fs-1 ps-4">訂閱你我的甜蜜郵件</p>
+                </div>
+                <form class="col-md-6 col-xl-4 position-relative emailForm mt-4 mt-md-0 ms-auto p-0">
+                    <div class="form-group position-relative">
+                        <label for="exampleInputEmail1" class="position-absolute">
+                            <i class="fa-regular fa-envelope text-black fs-2"></i>
+                        </label>
+                        <input type="email" class="form-control rounded-0" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <button type="submit"
+                        class="btn btn-warning fs-3 lh-1 px-4 rounded-0 position-absolute top-0 end-0 submitBtn">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="bg-light">
+            <div class="container-md mx-auto detailInner py-5">
+                <div class="row justify-content-between">
+                    <div class="col-md-8 d-md-flex flex-column">
+                        <div class="footerLogo flex-grow-1">
+                            <img src="./assets/images/common/logotype-lg-dark.svg" alt="sweetaste Logo" loading="lazy">
+                        </div>
+                        <ul class="footerInfo mt-5">
+                            <li>
+                                <a href="tel:07-1234-5678">07-1234-5678</a>
+                            </li>
+                            <li>
+                                <a href="mailto:sweetaste@email.com">sweetaste@email.com</a>
+                            </li>
+                            <li>
+                                <a href="https://maps.app.goo.gl/hPbAeXpUfB5wtfyd8" target="_blank">
+                                    800 高雄市新興區幸福路 520 號
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 d-none d-md-block text-end textImg">
+                        <img src="./assets/images/common/text-1.webp" alt="今天是個吃甜的好日子。" loading="lazy">
+                    </div>
+                </div>
+                <div class="d-md-flex justify-content-between align-items-end mt-5">
+                    <div class="footerSns d-flex justify-content-start align-items-center">
+                        <div>
+                            <a href="" target="_blank">
+                                <img src="./assets/images/common/ic-line@.svg" alt="line Icon">
+                            </a>
+                        </div>
+                        <div class="ps-3">
+                            <a href="" target="_blank">
+                                <img src="./assets/images/common/ic-facebook.svg" alt="facebook Icon">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="fontTimes mt-4 mt-md-0">
+                        <small>&copy; 2018 Sweetaste* All Rights Reserved</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

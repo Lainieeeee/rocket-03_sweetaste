@@ -1,0 +1,25 @@
+.loginTitle{
+    position: relative;
+    z-index: 0;
+    &:before,&:after{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background-color: $dark;
+        width: 90%;
+        height: 1px;
+        top: 50%;
+        left: 5%;
+        z-index: -1;
+    }
+}
+.loginSocial{
+    li{
+        a{
+            transition: 0.3s;
+            &:hover{
+                opacity: 0.75;
+            }
+        }
+    }
+}
