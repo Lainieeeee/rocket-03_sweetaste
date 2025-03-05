@@ -12555,4 +12555,18 @@ footer .textImg img {
 
 /*====================================================
 
-====================================================*//*# sourceMappingURL=all.css.map */
+====================================================*/
+.productsMainvisual .textImg {
+  top: 20%;
+  right: 8vw;
+}
+.productsMainvisual .textImg img {
+  max-width: 14rem;
+  width: 8vw;
+  height: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .productsMainvisual .textImg img {
+    width: 11vw;
+  }
+}/*# sourceMappingURL=all.css.map */

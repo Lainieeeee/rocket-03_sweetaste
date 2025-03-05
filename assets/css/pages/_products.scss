@@ -1,0 +1,14 @@
+.productsMainvisual{
+    .textImg{
+        top: 20%;
+        right: 8vw;
+        img{
+            max-width: 14rem;
+            width: 8vw;
+            height: auto;
+            @include md{
+                width: 11vw;
+            }
+        }
+    }
+}
