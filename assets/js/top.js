@@ -1,3 +1,6 @@
+/*====================================================
+splide輪播套件
+====================================================*/
 document.addEventListener('DOMContentLoaded', function () {
     new Splide('#topProductsSlider', {
         type: 'slide',

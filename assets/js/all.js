@@ -1,4 +1,6 @@
-// favoriteIcon
+/*====================================================
+收藏 favoriteIcon
+====================================================*/
 function actionToggle(button) {
     var solidIcon = button.querySelector('.fa-solid');
     var regularIcon = button.querySelector('.fa-regular');
