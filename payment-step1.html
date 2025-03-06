@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="assets/images/common/favicon.ico">
     <link rel="apple-touch-icon" href="assets/images/common/favicon.webp">
     <!-- title -->
-    <title>付款 | sweetaste</title>
+    <title>運送 | sweetaste</title>
 </head>
 <body>
 
@@ -76,66 +76,46 @@
                     <div class="bg-black p-4 p-md-5 text-light">
                         <!-- 標題 -->
                         <div class="row align-items-center mb-5">
-                            <h2 class="display-3 fw-bold col-6 col-md-7">付款</h2>
+                            <h2 class="display-3 fw-bold col-6 col-md-7">運送</h2>
                             <div class="col-6 col-md-5 text-end">
                                 <ul class="stepList light d-flex justify-content-between align-items-center fs-3">
-                                    <li class="bg-black rounded-circle lh-1"><i class="fa-solid fa-circle-check"></i></li>
                                     <li class="bg-black rounded-circle lh-1"><i class="fa-regular fa-circle-dot"></i></li>
+                                    <li class="bg-black rounded-circle lh-1"><i class="fa-regular fa-circle"></i></li>
                                     <li class="bg-black rounded-circle lh-1"><i class="fa-regular fa-circle"></i></li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- 信用卡卡號 -->
-                        <div class="mb-4 cardNumber">
-                            <label for="cardNumber" class="form-label fs-2 fw-bold">信用卡卡號</label>
-                            <input type="text" class="form-control" id="cardNumber" placeholder="9012-3456-7890-1234" pattern="\d{13,19}" inputmode="numeric" maxlength="19">
-                        </div>
-                        <!-- 持卡人姓名 -->
-                        <div class="mb-4">
-                            <label for="fullName" class="form-label fs-2 fw-bold">持卡人姓名</label>
-                            <div class="row">
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="lastName" placeholder="王">
-                                </div>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="firstName" placeholder="小明">
-                                </div>
+                        <!-- 姓氏/名字 -->
+                        <div class="mb-4 row">
+                            <div class="col-6">
+                                <label for="lastName" class="form-label fs-2 fw-bold">姓氏</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="王" maxlength="50">
+                            </div>
+                            <div class="col-6">
+                                <label for="firstName" class="form-label fs-2 fw-bold">名字</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="小明" maxlength="50">
                             </div>
                         </div>
-                        <!-- 有効期限 -->
+                        <!-- 電話 -->
                         <div class="mb-4">
-                            <label class="form-label fs-2 fw-bold">有效期限</label>
-                            <div class="row">
-                                <!-- 月 (MM) -->
-                                <div class="col-6 selectIcon">
-                                    <select class="form-select" id="expiryMonth">
-                                        <option value="" selected disabled>月</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
-                                </div>
-                                <!-- 年 (YY) -->
-                                <div class="col-6 selectIcon">
-                                    <select class="form-select" id="expiryYear">
-                                        <option value="" selected disabled>年</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <label for="phoneNumber" class="form-label fs-2 fw-bold">電話</label>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="0912-345-678" pattern="09\d{2}-\d{3}-\d{3}" inputmode="numeric" maxlength="12">
                         </div>
-                        <!-- 背面末三碼 -->
-                        <div class="col-6 pe-2">
-                            <label for="cvc" class="form-label fs-2 fw-bold">背面末三碼</label>
-                            <input type="text" class="form-control" id="cvc" placeholder="123" pattern="\d{3,4}" inputmode="numeric" maxlength="3">
+                        <!-- 地址 -->
+                        <div>
+                            <label for="address" class="form-label fs-2 fw-bold">地址</label>
+                            <div class="twzipcode">
+                                <div class="row">
+                                    <div class="col-6 selectIcon">
+                                        <select data-role="county" class="form-select"></select>
+                                    </div>
+                                    <div class="col-6 selectIcon">
+                                        <select data-role="district" class="form-select"></select>
+                                    </div>
+                                </div>
+                                <input type="hidden" data-role="zipcode" />
+                            </div>
+                            <input type="text" class="form-control mt-3" id="detailAddress" placeholder="幸福路 520 號" maxlength="50">
                         </div>
                     </div>
                     <input type="submit" value="下一步" class="btn fs-1 btn-warning rounded-0 text-black text-center fw-semibold w-100 p-3">
@@ -273,7 +253,8 @@
     </footer>
 
     <!-- js -->
-     <script src="assets/js/form.js"></script>
+    <script src="assets/js/vendors/twzipcode.latest.js"></script>
+    <script src="assets/js/form.js"></script>
 
 </body>
 </html>
