@@ -15,6 +15,11 @@
         left: 0;
         z-index: -1;
     }
+    &.light{
+        &:before{
+            background-color: $light;
+        }
+    }
 }
 .payText{
     img{

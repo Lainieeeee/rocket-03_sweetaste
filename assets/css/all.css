@@ -12275,12 +12275,12 @@ ol, ul, li {
   line-height: 2;
 }
 
-.imageTrimmingSquare, .imageTrimmingVertical, .imageTrimmingHorizontal, .imageTrimmingHorizontal-50 {
+.imageTrimmingSquare, .imageTrimmingVertical, .imageTrimmingHorizontal, .imageTrimmingHorizontal-70, .imageTrimmingHorizontal-50 {
   overflow: hidden;
   position: relative;
   width: 100%;
 }
-.imageTrimmingSquare img, .imageTrimmingVertical img, .imageTrimmingHorizontal img, .imageTrimmingHorizontal-50 img {
+.imageTrimmingSquare img, .imageTrimmingVertical img, .imageTrimmingHorizontal img, .imageTrimmingHorizontal-70 img, .imageTrimmingHorizontal-50 img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -12299,6 +12299,10 @@ ol, ul, li {
 
 .imageTrimmingHorizontal {
   padding-top: 80%;
+}
+
+.imageTrimmingHorizontal-70 {
+  padding-top: 70%;
 }
 
 .imageTrimmingHorizontal-50 {
@@ -12322,11 +12326,12 @@ ol, ul, li {
   background-color: #3F5D45;
 }
 
-form input[type=text], form input[type=password], form input[type=checkbox] {
+form .form-select, form input[type=text], form input[type=password], form input[type=checkbox] {
   margin: 0;
   padding: 8px !important;
   width: 100%;
   background: #EAF0ED;
+  background-color: #EAF0ED !important;
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -12366,6 +12371,26 @@ form input[type=checkbox] {
   width: 2rem;
   height: 2rem;
 }
+form .form-select::-moz-placeholder {
+  color: #8DA291 !important;
+}
+form .form-select::placeholder {
+  color: #8DA291 !important;
+}
+form .form-select:focus {
+  border-color: #3F5D45;
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  box-shadow: 0 0 2px 2px #3F5D45;
+}
+form .form-select:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #8DA291 inset;
+  -webkit-text-fill-color: #3F5D45 !important;
+}
+form .form-select option {
+  background-color: #fff;
+  color: #3F5D45;
+}
 form .labelIcon {
   position: relative;
   z-index: 0;
@@ -12379,6 +12404,21 @@ form .labelIcon label {
 }
 form .labelIcon input {
   padding-left: 5rem !important;
+}
+form .cardNumber {
+  position: relative;
+  z-index: 0;
+}
+form .cardNumber:after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f09d";
+  position: absolute;
+  display: inline-block;
+  bottom: 1.4rem;
+  right: 1rem;
+  z-index: 1;
+  color: #3F5D45;
+  font-size: 2rem;
 }
 
 header {
@@ -12604,6 +12644,9 @@ footer .textImg img {
   top: 50%;
   left: 0;
   z-index: -1;
+}
+.stepList.light:before {
+  background-color: #EAF0ED;
 }
 
 .payText img {
