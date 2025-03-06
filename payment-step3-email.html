@@ -88,16 +88,34 @@
                         <!--  -->
                         <div class="row mx-0 mb-5">
                             <div class="col-6 p-0">
-                                <a href="payment-step3-electronic.html" class="btn btn-light fs-2 fw-bold text-black rounded-0 p-4 w-100 border border-light">電子發票</a>
+                                <a href="payment-step3-electronic.html" class="btn btn-black fs-2 fw-bold text-light rounded-0 p-4 w-100 border border-light">電子發票</a>
                             </div>
                             <div class="col-6 p-0">
-                                <a href="payment-step3-email.html" class="btn btn-black fs-2 fw-bold text-light rounded-0 p-4 w-100 border border-light">郵寄發票</a>
+                                <a href="payment-step3-email.html" class="btn btn-light fs-2 fw-bold text-black rounded-0 p-4 w-100 border border-light">郵寄發票</a>
                             </div>
                         </div>
-                        <!-- 電子郵件信箱 -->
-                        <div class="mb-4">
-                            <label for="exampleFormControlInput1" class="form-label fs-2 fw-bold">電子郵件信箱</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example@email.com">
+                        <!-- 地址 -->
+                        <div class="mb-4 position-relative">
+                            <!-- 同運送地址 -->
+                            <div class="form-check d-flex justify-content-start align-items-center position-absolute top-0 end-0">
+                                <input class="form-check-input" type="checkbox" id="sameAddress">
+                                <label class="form-check-label ps-3 fw-semibold cursor-pointer" for="sameAddress">同運送地址</label>
+                            </div>
+                            <div>
+                                <label for="address" class="form-label fs-2 fw-bold">地址</label>
+                                <div class="twzipcode">
+                                    <div class="row">
+                                        <div class="col-6 selectIcon">
+                                            <select data-role="county" class="form-select"></select>
+                                        </div>
+                                        <div class="col-6 selectIcon">
+                                            <select data-role="district" class="form-select"></select>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" data-role="zipcode" />
+                                </div>
+                                <input type="text" class="form-control mt-3" id="detailAddress" placeholder="幸福路 520 號" maxlength="50">
+                            </div>
                         </div>
                         <!-- 統一編號（選填） -->
                         <div>
@@ -238,6 +256,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- js 地址 -->
+    <script src="assets/js/vendors/twzipcode.latest.js"></script>
+    <script src="assets/js/form.js"></script>
 
 </body>
 </html>
