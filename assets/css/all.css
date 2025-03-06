@@ -12326,7 +12326,7 @@ ol, ul, li {
   background-color: #3F5D45;
 }
 
-form .form-select, form input[type=text], form input[type=password], form input[type=checkbox], form input[type=tel] {
+form .form-select, form input[type=text], form input[type=email], form input[type=password], form input[type=checkbox], form input[type=tel] {
   margin: 0;
   padding: 8px !important;
   width: 100%;
@@ -12347,19 +12347,19 @@ form .form-select, form input[type=text], form input[type=password], form input[
 form label {
   font-size: 1.6rem;
 }
-form input[type=text]::-moz-placeholder, form input[type=password]::-moz-placeholder, form input[type=checkbox]::-moz-placeholder, form input[type=tel]::-moz-placeholder {
+form input[type=text]::-moz-placeholder, form input[type=email]::-moz-placeholder, form input[type=password]::-moz-placeholder, form input[type=checkbox]::-moz-placeholder, form input[type=tel]::-moz-placeholder {
   color: #8DA291 !important;
 }
-form input[type=text]::placeholder, form input[type=password]::placeholder, form input[type=checkbox]::placeholder, form input[type=tel]::placeholder {
+form input[type=text]::placeholder, form input[type=email]::placeholder, form input[type=password]::placeholder, form input[type=checkbox]::placeholder, form input[type=tel]::placeholder {
   color: #8DA291 !important;
 }
-form input[type=text]:focus, form input[type=password]:focus, form input[type=checkbox]:focus, form input[type=tel]:focus {
+form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form input[type=checkbox]:focus, form input[type=tel]:focus {
   border-color: #3F5D45;
   color: #3F5D45;
   background-color: #EAF0ED;
   box-shadow: 0 0 2px 2px #3F5D45;
 }
-form input[type=text]:-webkit-autofill, form input[type=password]:-webkit-autofill, form input[type=checkbox]:-webkit-autofill, form input[type=tel]:-webkit-autofill {
+form input[type=text]:-webkit-autofill, form input[type=email]:-webkit-autofill, form input[type=password]:-webkit-autofill, form input[type=checkbox]:-webkit-autofill, form input[type=tel]:-webkit-autofill {
   box-shadow: 0 0 0 1000px #8DA291 inset;
   -webkit-text-fill-color: #3F5D45 !important;
 }
