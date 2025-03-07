@@ -12595,6 +12595,10 @@ footer .textImg img {
     margin-top: 0;
   }
 }
+.topPracticeNav li a {
+  color: #fff;
+  transition: 0.7s;
+}
 .topPracticeNav li a .img img {
   filter: blur(4px);
 }
@@ -12616,10 +12620,10 @@ footer .textImg img {
   opacity: 0.8;
   transition: 0.7s;
 }
-.topPracticeNav li a:hover:before {
-  opacity: 0.95;
+.topPracticeNav li a:hover {
+  color: #3F5D45;
 }
-.topPracticeNav li.yellow a:before {
+.topPracticeNav li a:hover:before {
   background-color: #FFE180;
 }
 

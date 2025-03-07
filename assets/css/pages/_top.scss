@@ -5,6 +5,8 @@
     }
     li{
         a{
+            color: $white;
+            transition: 0.7s;
             .img{
                 img{
                     filter: blur(4px);
@@ -27,13 +29,7 @@
                 transition: 0.7s;
             }
             &:hover{
-                &:before{
-                    opacity: 0.95;
-                }
-            }
-        }
-        &.yellow{
-            a{
+                color: $black;
                 &:before{
                     background-color: $warning;
                 }
