@@ -1,0 +1,24 @@
+/*====================================================
+Placeholder(佔位符)
+====================================================*/
+@mixin line-clamp($lines) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+}
+
+// 文字最多顯示1排
+.lineCamp-1{
+    @include line-clamp(1);
+}
+
+// 文字最多顯示2排
+.lineCamp-2{
+    @include line-clamp(2);
+}
+
+// 文字最多顯示3排
+.lineCamp-3{
+    @include line-clamp(3);
+}

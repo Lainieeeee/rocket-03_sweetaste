@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <!-- js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.js"></script>
+    <!-- fontawsome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- ico -->
+    <link rel="shortcut icon" href="assets/images/common/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/common/favicon.webp">
+    <!-- title -->
+    <title>您的購物車 | sweetaste</title>
+</head>
+<body>
+
+    <!-- header -->
+    <header class="bg-white position-fixed top-0 start-0 w-100">
+        <div class="container-md mx-auto detailInner py-5">
+            <nav class="navbar navbar-expand-md navbar-light p-0">
+                <!-- button -->
+                <button class="navbar-toggler p-0 border-0 shadow-none" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <div class="hamburgerMenu"><span></span><span></span><span></span></div>
+                </button>
+                <!-- headerLogo -->
+                <h1 class="headerLogo mx-auto">
+                    <a class="navbar-brand d-inline-block" href="index.html">
+                        <img src="./assets/images/common/logo-all-dark.svg" alt="sweetaste Logo" class="d-none d-md-block">
+                        <img src="./assets/images/common/logotype-lg-dark.svg" alt="sweetaste Logo" class="d-block d-md-none">
+                    </a>
+                </h1>
+                <!-- navbarNav -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center fw-bold d-block d-md-flex text-center text-md-end mt-5 mt-md-0">
+                        <li class="nav-item px-md-4 px-lg-5 mt-3 mt-md-0">
+                            <a class="nav-link w-100 d-md-block" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item px-md-4 px-lg-5 mt-3 mt-md-0">
+                            <a class="nav-link w-100 d-md-block" href="products.html">甜點</a>
+                        </li>
+                        <li class="nav-item px-md-4 px-lg-5 mt-3 mt-md-0">
+                            <a class="nav-link w-100 d-md-block" href="login.html">登入</a>
+                        </li>
+                        <li class="nav-item px-md-4 px-lg-5 d-none d-md-block">
+                            <a class="nav-link lh-1" href="cart.html">
+                                <i class="fa-solid fa-cart-shopping fs-2"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- cartBtn -->
+                <div class="cartBtn d-md-none position-fixed">
+                    <a class="nav-link lh-1" href="cart.html">
+                        <i class="fa-solid fa-cart-shopping fs-1"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- 確保header的高度空間 -->
+    <div class="d-none d-md-block" style="height: 118.73px;"></div>
+    <div class="d-block d-md-none" style="height: 91.55px;"></div>
+
+    <!-- main -->
+    <main>
+        <form method="post" action="" class="container-md detailInner mx-auto row pt-0 px-0 px-md-5 pb-0 pb-md-5 mb-md-5">
+            <div class="col-xl-8 p-0 pe-xl-4">
+                <h2 class="fs-1 bg-light text-center p-4 px-xl-4 py-xl-5 fw-bold text-black">您的購物車</h2>
+                <!-- cartTable -->
+                <ul class="cartTable fs-2 text-center px-4 px-md-0 pt-5 pt-md-0">
+                    <li class="row align-items-center border-bottom border-light m-0">
+                        <div class="productImg col-4 col-md-2 p-4 ps-0">
+                            <div class="imageTrimmingSquare">
+                                <img src="./assets/images/products/img-7.webp" alt="焦糖馬卡龍">
+                            </div>
+                        </div>
+                        <div class="productInfo d-md-inline-block text-start col-8 col-md-3 p-4">
+                            <p class="lineCamp-1">焦糖馬卡龍</p>
+                            <p>NT$ 450</p>
+                            <div class="counter border border-light d-flex justify-content-start align-items-center d-md-none mt-3 text-center col-8 col-sm-6">
+                                <button id="decrement" type="button" class="btn text-black fs-2 col-3 p-3 border-0">-</button>
+                                <p class="count fs-2 border-start border-end border-light col-6 p-3">0</p>
+                                <button id="increment" type="button" class="btn text-black fs-2 col-3 p-3 border-0">+</button>
+                            </div>
+                        </div>
+                        <div class="productNum col-3 p-4 d-none d-md-block">
+                            <div class="counter border border-light row align-items-center">
+                                <button id="decrement" type="button" class="btn text-black fs-2 col-3 p-3 border-0">-</button>
+                                <p class="count fs-2 border-start border-end border-light col-6 p-3">0</p>
+                                <button id="increment" type="button" class="btn text-black fs-2 col-3 p-3 border-0">+</button>
+                            </div>
+                        </div>
+                        <div class="productPrice col-12 col-md-3 p-4 text-end text-md-center">
+                            <p class="fw-semibold">NT$ 900</p>
+                        </div>
+                        <div class="productDel col-1 p-4 text-end d-none d-md-block">
+                            <a href="">
+                                <i class="fa-solid fa-trash fs-2 text-black"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="row align-items-center border-bottom border-light m-0">
+                        <div class="productImg col-4 col-md-2 p-4 ps-0">
+                            <div class="imageTrimmingSquare">
+                                <img src="./assets/images/products/img-5.webp" alt="焦糖馬卡龍">
+                            </div>
+                        </div>
+                        <div class="productInfo d-md-inline-block text-start col-8 col-md-3 p-4">
+                            <p class="lineCamp-1">焦糖馬卡龍</p>
+                            <p>NT$ 450</p>
+                            <div class="counter border border-light d-flex justify-content-start align-items-center d-md-none mt-3 text-center col-8 col-sm-6">
+                                <button id="decrement" type="button" class="btn text-black fs-2 col-3 p-3 border-0">-</button>
+                                <p class="count fs-2 border-start border-end border-light col-6 p-3">0</p>
+                                <button id="increment" type="button" class="btn text-black fs-2 col-3 p-3 border-0">+</button>
+                            </div>
+                        </div>
+                        <div class="productNum col-3 p-4 d-none d-md-block">
+                            <div class="counter border border-light row align-items-center">
+                                <button id="decrement" type="button" class="btn text-black fs-2 col-3 p-3 border-0">-</button>
+                                <p class="count fs-2 border-start border-end border-light col-6 p-3">0</p>
+                                <button id="increment" type="button" class="btn text-black fs-2 col-3 p-3 border-0">+</button>
+                            </div>
+                        </div>
+                        <div class="productPrice col-12 col-md-3 p-4 text-end text-md-center">
+                            <p class="fw-semibold">NT$ 900</p>
+                        </div>
+                        <div class="productDel col-1 p-4 text-end d-none d-md-block">
+                            <a href="">
+                                <i class="fa-solid fa-trash fs-2 text-black"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="row align-items-center border-bottom border-light m-0">
+                        <div class="productImg col-4 col-md-2 p-4 ps-0">
+                            <div class="imageTrimmingSquare">
+                                <img src="./assets/images/products/img-3.webp" alt="焦糖馬卡龍">
+                            </div>
+                        </div>
+                        <div class="productInfo d-md-inline-block text-start col-8 col-md-3 p-4">
+                            <p class="lineCamp-1">焦糖馬卡龍</p>
+                            <p>NT$ 450</p>
+                            <div class="counter border border-light d-flex justify-content-start align-items-center d-md-none mt-3 text-center col-8 col-sm-6">
+                                <button id="decrement" type="button" class="btn text-black fs-2 col-3 p-3 border-0">-</button>
+                                <p class="count fs-2 border-start border-end border-light col-6 p-3">0</p>
+                                <button id="increment" type="button" class="btn text-black fs-2 col-3 p-3 border-0">+</button>
+                            </div>
+                        </div>
+                        <div class="productNum col-3 p-4 d-none d-md-block">
+                            <div class="counter border border-light row align-items-center">
+                                <button id="decrement" type="button" class="btn text-black fs-2 col-3 p-3 border-0">-</button>
+                                <p class="count fs-2 border-start border-end border-light col-6 p-3">0</p>
+                                <button id="increment" type="button" class="btn text-black fs-2 col-3 p-3 border-0">+</button>
+                            </div>
+                        </div>
+                        <div class="productPrice col-12 col-md-3 p-4 text-end text-md-center">
+                            <p class="fw-semibold">NT$ 900</p>
+                        </div>
+                        <div class="productDel col-1 p-4 text-end d-none d-md-block">
+                            <a href="">
+                                <i class="fa-solid fa-trash fs-2 text-black"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-4 pt-5 pt-xl-0 p-0 ps-xl-3">
+                <div class="bg-black text-light p-4 p-md-5 d-none d-xl-block">
+                    <h3 class="fs-1 fw-bold text-center border-bottom border-light pb-5">訂單摘要</h3>
+                    <div class="fs-2 pt-4">
+                        <dl class="row m-auto">
+                            <dt class="col-4 px-4 py-2 fw-normal">小計</dt>
+                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 2,700</dd>
+                        </dl>
+                        <dl class="row m-auto">
+                            <dt class="col-4 px-4 py-2 fw-normal">運費</dt>
+                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 300</dd>
+                        </dl>
+                        <dl class="row m-auto fw-bold fs-1">
+                            <dt class="col-4 px-4 py-2">總計</dt>
+                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 3,000</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="d-xl-none px-3">
+                    <h3 class="fs-1 fw-bold text-center bg-light text-black p-4">訂單摘要</h3>
+                    <div class="fs-2 py-4">
+                        <dl class="row m-auto">
+                            <dt class="col-4 px-4 py-2 fw-normal">小計</dt>
+                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 2,700</dd>
+                        </dl>
+                        <dl class="row m-auto">
+                            <dt class="col-4 px-4 py-2 fw-normal">運費</dt>
+                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 300</dd>
+                        </dl>
+                        <dl class="row m-auto fw-bold fs-1">
+                            <dt class="col-4 px-4 py-2">總計</dt>
+                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 3,000</dd>
+                        </dl>
+                    </div>
+                </div>
+                <input type="submit" value="結帳" class="btn fs-1 btn-warning rounded-0 text-black text-center fw-semibold w-100 p-3">
+            </div>
+        </form>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="bg-black text-white">
+            <div class="container-md mx-auto detailInner row py-5">
+                <div class="col-md-6 d-flex justify-content-start align-items-center p-0">
+                    <div class="logoIcon">
+                        <img src="./assets/images/common/logo-light.svg" alt="Logo圖" loading="lazy">
+                    </div>
+                    <p class="fontHelveticaNeue fs-1 ps-4">訂閱你我的甜蜜郵件</p>
+                </div>
+                <form class="col-md-6 col-xl-4 position-relative emailForm mt-4 mt-md-0 ms-auto p-0">
+                    <div class="form-group position-relative">
+                        <label for="exampleInputEmail1" class="position-absolute">
+                            <i class="fa-regular fa-envelope text-black fs-2"></i>
+                        </label>
+                        <input type="email" class="form-control rounded-0" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <button type="submit"
+                        class="btn btn-warning fs-3 lh-1 px-4 rounded-0 position-absolute top-0 end-0 submitBtn">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="bg-light">
+            <div class="container-md mx-auto detailInner py-5">
+                <div class="row justify-content-between">
+                    <div class="col-md-8 d-md-flex flex-column">
+                        <div class="footerLogo flex-grow-1">
+                            <img src="./assets/images/common/logotype-lg-dark.svg" alt="sweetaste Logo" loading="lazy">
+                        </div>
+                        <ul class="footerInfo mt-5">
+                            <li>
+                                <a href="tel:07-1234-5678">07-1234-5678</a>
+                            </li>
+                            <li>
+                                <a href="mailto:sweetaste@email.com">sweetaste@email.com</a>
+                            </li>
+                            <li>
+                                <a href="https://maps.app.goo.gl/hPbAeXpUfB5wtfyd8" target="_blank">
+                                    800 高雄市新興區幸福路 520 號
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 d-none d-md-block text-end textImg">
+                        <img src="./assets/images/common/text-1.webp" alt="今天是個吃甜的好日子。" loading="lazy">
+                    </div>
+                </div>
+                <div class="d-md-flex justify-content-between align-items-end mt-5">
+                    <div class="footerSns d-flex justify-content-start align-items-center">
+                        <div>
+                            <a href="" target="_blank">
+                                <img src="./assets/images/common/ic-line@.svg" alt="line Icon">
+                            </a>
+                        </div>
+                        <div class="ps-3">
+                            <a href="" target="_blank">
+                                <img src="./assets/images/common/ic-facebook.svg" alt="facebook Icon">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="fontTimes mt-4 mt-md-0">
+                        <small>&copy; 2018 Sweetaste* All Rights Reserved</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/counter.js"></script>
+
+</body>
+</html>

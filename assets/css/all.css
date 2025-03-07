@@ -12443,6 +12443,30 @@ form .cardNumber:after {
   font-size: 2rem;
 }
 
+/*====================================================
+Placeholder(佔位符)
+====================================================*/
+.lineCamp-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.lineCamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.lineCamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
 header {
   z-index: 9999;
 }
@@ -12720,4 +12744,13 @@ footer .textImg img {
 }
 .loginSocial li a:hover {
   opacity: 0.75;
+}
+
+.cartTable .productImg .imageTrimmingSquare img {
+  left: 0;
+}
+@media screen and (max-width: 767.98px) {
+  .cartTable .productPrice {
+    border-top: 1px solid #EAF0ED;
+  }
 }/*# sourceMappingURL=all.css.map */

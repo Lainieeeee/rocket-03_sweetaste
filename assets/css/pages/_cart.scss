@@ -1,0 +1,14 @@
+.cartTable{
+    .productImg{
+        .imageTrimmingSquare{
+            img{
+                left: 0;
+            }
+        }
+    }
+    @include md{
+        .productPrice{
+            border-top: 1px solid $light;
+        }
+    }
+}

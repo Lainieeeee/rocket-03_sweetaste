@@ -16,6 +16,7 @@
 @import "./components/imageTrimming";
 @import "./components/pagination";
 @import "./components/form";
+@import "./components/lineCamp";
 
 // layout
 @import "./layout/header";
@@ -26,6 +27,7 @@
 @import "./pages/pay";
 @import "./pages/products";
 @import "./pages/login";
+@import "./pages/cart";
 
 // vendors
 @import "../../node_modules/@splidejs/splide/dist/css/splide-core.min.css";
