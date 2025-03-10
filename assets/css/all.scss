@@ -6,7 +6,7 @@
 @import "./helpers/mixins";
 
 // bootstrap
-@import "../js/vendors/bootstrap/scss/bootstrap";
+@import "./../js/vendors/bootstrap/scss/bootstrap";
 
 // base
 @import "./base/common";
@@ -30,5 +30,5 @@
 @import "./pages/cart";
 
 // vendors
-@import "../js/vendors/@splidejs/splide/dist/css/splide-core.min.css";
-@import "../js/vendors/@splidejs/splide/dist/css/themes/splide-default.min.css";
+@import "./../js/vendors/@splidejs/splide/dist/css/splide-core.min.css";
+@import "./../js/vendors/@splidejs/splide/dist/css/themes/splide-default.min.css";

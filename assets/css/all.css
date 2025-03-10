@@ -3,8 +3,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import "../js/vendors/@splidejs/splide/dist/css/splide-core.min.css";
-@import "../js/vendors/@splidejs/splide/dist/css/themes/splide-default.min.css";
+@import "./../js/vendors/@splidejs/splide/dist/css/splide-core.min.css";
+@import "./../js/vendors/@splidejs/splide/dist/css/themes/splide-default.min.css";
 html, body, div, span, applet, object, iframe,
 h1,
 .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, blockquote, pre,
@@ -12546,7 +12546,7 @@ header #navbarNav li a:hover {
 }
 header .cartBtn {
   top: 3.5rem;
-  right: 2rem;
+  right: 3rem;
 }
 header .navbar-toggler .hamburgerMenu {
   position: relative;
@@ -12655,6 +12655,7 @@ topPracticeNav
   z-index: 0;
   color: #fff;
   text-decoration: none;
+  display: block;
 }
 .topPracticeNav li a:before {
   content: "";

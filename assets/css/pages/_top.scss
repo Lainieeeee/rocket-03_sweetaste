@@ -9,6 +9,7 @@ topPracticeNav
             z-index: 0;
             color: $white;
             text-decoration: none;
+            display: block;
             &:before{
                 content: "";
                 position: absolute;
