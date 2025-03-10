@@ -67,143 +67,147 @@
     <!-- 確保header的高度空間 -->
     <div class="d-none d-md-block" style="height: 121.47px;"></div>
     <div class="d-block d-md-none" style="height: 91.53px;"></div>
-
+    
     <!-- main -->
     <main>
-        <div class="container-md col-xl-10 col-xxl-9 row detailInner mx-auto px-0 px-md-5 py-0 mb-md-5 pb-md-5">
-            <div class="col-md-7 px-0 px-md-3">
-                <!-- 表單form -->
-                <form method="post" action="">
-                    <div class="bg-black p-4 p-md-5 text-light">
-                        <!-- 標題 -->
-                        <div class="row align-items-center mb-5">
-                            <h2 class="display-3 fw-bold col-6 col-md-7">付款</h2>
-                            <div class="col-6 col-md-5 text-end">
-                                <ul class="stepList light d-flex justify-content-between align-items-center fs-3">
-                                    <li class="bg-black rounded-circle lh-1"><i class="fa-solid fa-circle-check"></i></li>
-                                    <li class="bg-black rounded-circle lh-1"><i class="fa-regular fa-circle-dot"></i></li>
-                                    <li class="bg-black rounded-circle lh-1"><i class="fa-regular fa-circle"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- 信用卡卡號 -->
-                        <div class="mb-4">
-                            <label for="cardNumber" class="form-label fs-2 fw-bold">信用卡卡號</label>
-                            <div class="labelIconRight">
-                                <input type="text" class="form-control" id="cardNumber" placeholder="9012-3456-7890-1234" pattern="\d{13,19}" inputmode="numeric" maxlength="19">
-                                <i class="fa-regular fa-credit-card text-black"></i>
-                            </div>
-                        </div>
-                        <!-- 持卡人姓名 -->
-                        <div class="mb-4">
-                            <label for="fullName" class="form-label fs-2 fw-bold">持卡人姓名</label>
-                            <div class="row">
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="lastName" placeholder="王">
-                                </div>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="firstName" placeholder="小明">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 有效期限 -->
-                        <div class="mb-4">
-                            <label class="form-label fs-2 fw-bold">有效期限</label>
-                            <div class="row">
-                                <!-- 月 (MM) -->
-                                <div class="col-6 selectIcon">
-                                    <select class="form-select" id="expiryMonth">
-                                        <option value="" selected="" disabled="">月</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
-                                </div>
-                                <!-- 年 (YY) -->
-                                <div class="col-6 selectIcon">
-                                    <select class="form-select" id="expiryYear">
-                                        <option value="" selected="" disabled="">年</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 背面末三碼 -->
-                        <div class="col-md-6 pe-md-3">
-                            <label for="cvc" class="form-label fs-2 fw-bold">背面末三碼</label>
-                            <input type="text" class="form-control" id="cvc" placeholder="123" pattern="\d{3,4}" inputmode="numeric" maxlength="3">
+        <!-- 表單form -->
+        <form method="" action="" class="container-md row col-xl-9 col-xxl-7 mx-auto p-0 p-md-5 pt-md-0 mb-md-5">
+            <!-- 付款 -->
+            <div class="col-lg-7 p-0">
+                <div class="bg-black text-white p-5">
+                    <!-- 標題 -->
+                    <div class="row align-items-center mb-5">
+                        <h2 class="display-3 fw-bold col-6 col-md-7">付款</h2>
+                        <div class="col-6 col-md-5 text-end">
+                            <ul class="stepList light d-flex justify-content-between align-items-center fs-3">
+                                <li class="bg-black rounded-circle lh-1"><i class="fa-solid fa-circle-check"></i></li>
+                                <li class="bg-black rounded-circle lh-1"><i class="fa-regular fa-circle-dot"></i></li>
+                                <li class="bg-black rounded-circle lh-1"><i class="fa-regular fa-circle"></i></li>
+                            </ul>
                         </div>
                     </div>
-                    <!-- 下一步 -->
-                    <input type="submit" value="下一步" class="btn fs-1 btn-warning rounded-0 text-black text-center fw-semibold w-100 p-3">
-                </form>
+                    <!-- 信用卡卡號 -->
+                    <div class="mb-4">
+                        <label for="cardNumber" class="form-label fs-2 fw-bold">信用卡卡號</label>
+                        <div class="labelIconRight">
+                            <input type="text" class="form-control" id="cardNumber" placeholder="9012-3456-7890-1234" pattern="\d{13,19}" inputmode="numeric" maxlength="19">
+                            <i class="fa-regular fa-credit-card text-black"></i>
+                        </div>
+                    </div>
+                    <!-- 持卡人姓名 -->
+                    <div class="mb-4">
+                        <label for="fullName" class="form-label fs-2 fw-bold">持卡人姓名</label>
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="lastName" placeholder="王">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="firstName" placeholder="小明">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 有效期限 -->
+                    <div class="mb-4">
+                        <label class="form-label fs-2 fw-bold">有效期限</label>
+                        <div class="row">
+                            <!-- 月 (MM) -->
+                            <div class="col-6 selectIcon">
+                                <select class="form-select" id="expiryMonth">
+                                    <option value="" selected="" disabled="">月</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <!-- 年 (YY) -->
+                            <div class="col-6 selectIcon">
+                                <select class="form-select" id="expiryYear">
+                                    <option value="" selected="" disabled="">年</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 背面末三碼 -->
+                    <div class="col-md-6 pe-md-3">
+                        <label for="cvc" class="form-label fs-2 fw-bold">背面末三碼</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="123" pattern="\d{3,4}" inputmode="numeric" maxlength="3">
+                    </div>
+                </div>
+                <!-- 下一步 -->
+                <input type="submit" value="下一步" class="btn fs-1 btn-warning rounded-0 text-black text-center fw-semibold w-100 p-3">
             </div>
-            <div class="col-md-5 d-none d-md-block">
-                <div>
-                    <p class="fs-1 bg-light text-center p-4 fw-bold text-dark">訂單摘要</p>
-                    <div class="text-dark fs-2 border border-light py-3">
-                        <dl class="row m-auto">
-                            <dt class="col-4 px-4 py-2 fw-normal">小計</dt>
-                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 2,700</dd>
+            <!-- 訂單摘要/購物清單 -->
+            <div class="col-lg-5 d-none d-lg-block ps-5">
+                <!-- 訂單摘要 -->
+                <div class="border border-light text-dark">
+                    <h3 class="text-center bg-light fw-bold fs-1 px-5 py-4">訂單摘要</h3>
+                    <!-- 總計 -->
+                    <div class="border-top border-light p-5 fs-2">
+                        <dl class="row align-items-center">
+                            <dt class="col-6 fw-normal">小計</dt>
+                            <dd class="col-6 fw-normal text-end">NT$ 2,700</dd>
                         </dl>
-                        <dl class="row m-auto">
-                            <dt class="col-4 px-4 py-2 fw-normal">運費</dt>
-                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 300</dd>
+                        <dl class="row align-items-center">
+                            <dt class="col-6 fw-normal">運費</dt>
+                            <dd class="col-6 fw-normal text-end">NT$ 300</dd>
                         </dl>
-                        <dl class="row m-auto fw-bold fs-1">
-                            <dt class="col-4 px-4 py-2">總計</dt>
-                            <dd class="col-8 px-4 py-2 text-end m-0">NT$ 3,000</dd>
+                        <dl class="row align-items-center fs-1 mb-0">
+                            <dt class="col-6 fw-semibold">總計</dt>
+                            <dd class="col-6 fw-semibold text-end">NT$ 3,000</dd>
                         </dl>
                     </div>
                 </div>
-                <div class="mt-4">
-                    <p class="fs-1 bg-light text-center p-4 fw-bold text-dark">購物清單</p>
-                    <div class="text-dark fs-2 border border-light py-3">
-                        <div class="row align-items-center mx-auto py-3 px-4">
+                <!-- 購物清單 -->
+                <div class="border border-light text-dark mt-4">
+                    <h3 class="text-center bg-light fw-bold fs-1 px-5 py-4">購物清單</h3>
+                    <!--  -->
+                    <div class="border-top border-light px-5 pb-5 pt-4 fs-2">
+                        <div class="row align-items-center pt-4">
                             <div class="col-6">
                                 <div class="imageTrimmingHorizontal-70">
                                     <img src="assets/images/products/img-7.webp" alt="焦糖馬卡龍" loading="lazy">
                                 </div>
                             </div>
                             <div class="col-6">
-                                <p>焦糖馬卡龍（2）</p>
+                                <p class="lineCamp-1">焦糖馬卡龍（2）</p>
                                 <p class="fw-bold fs-1">NT$ 900</p>
                             </div>
                         </div>
-                        <div class="row align-items-center mx-auto py-3 px-4">
+                        <div class="row align-items-center pt-4">
                             <div class="col-6">
                                 <div class="imageTrimmingHorizontal-70">
                                     <img src="assets/images/products/img-5.webp" alt="焦糖馬卡龍" loading="lazy">
                                 </div>
                             </div>
                             <div class="col-6">
-                                <p>焦糖馬卡龍（2）</p>
+                                <p class="lineCamp-1">焦糖馬卡龍（2）</p>
                                 <p class="fw-bold fs-1">NT$ 900</p>
                             </div>
                         </div>
-                        <div class="row align-items-center mx-auto py-3 px-4">
+                        <div class="row align-items-center pt-4">
                             <div class="col-6">
                                 <div class="imageTrimmingHorizontal-70">
                                     <img src="assets/images/products/img-3.webp" alt="焦糖馬卡龍" loading="lazy">
                                 </div>
                             </div>
                             <div class="col-6">
-                                <p>焦糖馬卡龍（2）</p>
+                                <p class="lineCamp-1">焦糖馬卡龍（2）</p>
                                 <p class="fw-bold fs-1">NT$ 900</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
 
     <!-- footer -->
