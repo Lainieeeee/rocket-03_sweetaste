@@ -39,7 +39,7 @@ form{
                 border-color: $black;
                 color: $black;
                 background-color: $light;
-                box-shadow: 0 0 2px 2px $light;
+                box-shadow: 0 0 2px 2px $black;
             }
             &:-webkit-autofill{
                 box-shadow: 0 0 0 1000px $dark inset;
@@ -86,7 +86,7 @@ form{
                 border-color: $black;
                 color: $black;
                 background-color: $light;
-                box-shadow: 0 0 2px 2px $light;
+                box-shadow: 0 0 2px 2px $black;
             }
         }
     }
