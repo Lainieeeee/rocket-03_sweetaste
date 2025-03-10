@@ -6,13 +6,17 @@ header{
   }
   .headerLogo{
       a{
+        transition: 0.3s;
           img{
               width: 250px;
               height: auto;
               @include md{
                   width: 120px;
               }
-          }
+        }
+        &:hover{
+          opacity: 0.7;
+        }
       }
   }
   #navbarNav{
@@ -20,10 +24,14 @@ header{
           a{
               color: $black;
               transition: 0.3s;
+              &:hover{
+                opacity: 0.7;
+              }
               @include md {
                   &:hover{
-                      background-color: $black;
-                      color: $white;
+                    opacity: 1;
+                    background-color: $black;
+                    color: $white;
                   }
               }
           }

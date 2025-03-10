@@ -40,6 +40,10 @@ footer{
     .footerSns{
         div{
             a{
+                transition: 0.3s;
+                &:hover{
+                    opacity: 0.7;
+                }
                 img{
                     width: 3.2rem;
                     height: auto;
