@@ -12326,7 +12326,10 @@ ol, ul, li {
   background-color: #3F5D45;
 }
 
-form .form-select, form input[type=text], form input[type=email], form input[type=password], form input[type=checkbox], form input[type=tel] {
+/*====================================================
+Placeholder(佔位符)
+====================================================*/
+form .form-select, form input[type=text], form input[type=email], form input[type=password], form input[type=tel] {
   margin: 0;
   padding: 8px !important;
   width: 100%;
@@ -12344,32 +12347,69 @@ form .form-select, form input[type=text], form input[type=email], form input[typ
   border-radius: 0 !important;
 }
 
+/*====================================================
+表單form
+====================================================*/
 form label {
   font-size: 1.6rem;
 }
-form input[type=text]::-moz-placeholder, form input[type=email]::-moz-placeholder, form input[type=password]::-moz-placeholder, form input[type=checkbox]::-moz-placeholder, form input[type=tel]::-moz-placeholder {
+form input[type=text]::-moz-placeholder, form input[type=email]::-moz-placeholder, form input[type=password]::-moz-placeholder, form input[type=tel]::-moz-placeholder {
   color: #8DA291 !important;
 }
-form input[type=text]::placeholder, form input[type=email]::placeholder, form input[type=password]::placeholder, form input[type=checkbox]::placeholder, form input[type=tel]::placeholder {
+form input[type=text]::placeholder, form input[type=email]::placeholder, form input[type=password]::placeholder, form input[type=tel]::placeholder {
   color: #8DA291 !important;
 }
-form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form input[type=checkbox]:focus, form input[type=tel]:focus {
+form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form input[type=tel]:focus {
   border-color: #3F5D45;
   color: #3F5D45;
   background-color: #EAF0ED;
-  box-shadow: 0 0 2px 2px #3F5D45;
+  box-shadow: 0 0 2px 2px #EAF0ED;
 }
-form input[type=text]:-webkit-autofill, form input[type=email]:-webkit-autofill, form input[type=password]:-webkit-autofill, form input[type=checkbox]:-webkit-autofill, form input[type=tel]:-webkit-autofill {
+form input[type=text]:-webkit-autofill, form input[type=email]:-webkit-autofill, form input[type=password]:-webkit-autofill, form input[type=tel]:-webkit-autofill {
   box-shadow: 0 0 0 1000px #8DA291 inset;
   -webkit-text-fill-color: #3F5D45 !important;
 }
-form input[type=checkbox] {
-  -webkit-appearance: revert;
-     -moz-appearance: revert;
-          appearance: revert;
-  min-height: initial;
+form input[type=checkbox], form input[type=radio] {
   width: 2rem;
   height: 2rem;
+  border: 1px solid #3F5D45;
+  background-color: #EAF0ED;
+  border-radius: 0 !important;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+form input[type=checkbox]:checked, form input[type=radio]:checked {
+  background-color: #EAF0ED;
+  border: 1px solid #3F5D45;
+  position: relative;
+}
+form input[type=checkbox]:checked:before, form input[type=checkbox]:checked:after, form input[type=radio]:checked:before, form input[type=radio]:checked:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: #3F5D45;
+}
+form input[type=checkbox]:checked:before, form input[type=radio]:checked:before {
+  width: 8px;
+  height: 3px;
+  top: 9px;
+  left: 1px;
+  transform: rotate(45deg);
+}
+form input[type=checkbox]:checked:after, form input[type=radio]:checked:after {
+  width: 14px;
+  height: 3px;
+  top: 7px;
+  left: 4px;
+  transform: rotate(-45deg);
+}
+form input[type=checkbox]:focus, form input[type=radio]:focus {
+  border-color: #3F5D45;
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  box-shadow: 0 0 2px 2px #EAF0ED;
 }
 form .form-select::-moz-placeholder {
   color: #8DA291 !important;
@@ -12391,19 +12431,27 @@ form .form-select option {
   background-color: #fff;
   color: #3F5D45;
 }
-form .labelIcon {
+form .labelIconLeft, form .labelIconRight {
   position: relative;
   z-index: 0;
 }
-form .labelIcon label {
+form .labelIconLeft i, form .labelIconRight i {
   position: absolute;
-  top: 1.3rem;
-  left: 1.5rem;
-  z-index: 1;
+  top: 1.9rem;
   font-size: 2rem;
+  z-index: 1;
 }
-form .labelIcon input {
-  padding-left: 5rem !important;
+form .labelIconLeft input {
+  padding-left: 4.5rem !important;
+}
+form .labelIconLeft i {
+  left: 1.5rem;
+}
+form .labelIconRight input {
+  padding-right: 4.5rem !important;
+}
+form .labelIconRight i {
+  right: 1.5rem;
 }
 form .selectIcon {
   position: relative;
@@ -12426,21 +12474,6 @@ form .selectIcon:before {
 form .selectIcon:after {
   content: "\f0dd";
   bottom: 1.2rem;
-}
-form .cardNumber {
-  position: relative;
-  z-index: 0;
-}
-form .cardNumber:after {
-  font-family: "Font Awesome 6 Free";
-  content: "\f09d";
-  position: absolute;
-  display: inline-block;
-  bottom: 1.4rem;
-  right: 1rem;
-  z-index: 1;
-  color: #3F5D45;
-  font-size: 2rem;
 }
 
 /*====================================================

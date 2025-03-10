@@ -1,3 +1,6 @@
+/*====================================================
+Placeholder(佔位符)
+====================================================*/
 %setForm{
     margin: 0;
     padding: 8px !important;
@@ -16,6 +19,9 @@
     border-radius: 0!important;
 }
 
+/*====================================================
+表單form
+====================================================*/
 form{
     label{
         font-size: 1.6rem;
@@ -24,7 +30,6 @@ form{
         &[type="text"],
         &[type="email"],
         &[type="password"],
-        &[type="checkbox"],
         &[type="tel"]{
             @extend %setForm;
             &::placeholder {
@@ -34,18 +39,55 @@ form{
                 border-color: $black;
                 color: $black;
                 background-color: $light;
-                box-shadow: 0 0 2px 2px $black;
+                box-shadow: 0 0 2px 2px $light;
             }
             &:-webkit-autofill{
                 box-shadow: 0 0 0 1000px $dark inset;
                 -webkit-text-fill-color: $black !important;
             }
         }
-        &[type="checkbox"] {
-            appearance: revert;
-            min-height: initial;
+        &[type="checkbox"],
+        &[type="radio"] {
             width: 2rem;
             height: 2rem;
+            border: 1px solid $black;
+            background-color: $light;
+            border-radius: 0 !important;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            &:checked {
+                background-color: $light;
+                border: 1px solid $black;
+                position: relative;
+                &:before,&:after {
+                    content: "";
+                    position: absolute;
+                    display: inline-block;
+                    background-color: $black;
+                }
+                &:before {
+                    width: 8px;
+                    height: 3px;
+                    top: 9px;
+                    left: 1px;
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    width: 14px;
+                    height: 3px;
+                    top: 7px;
+                    left: 4px;
+                    transform: rotate(-45deg);
+                }
+            }
+            &:focus{
+                border-color: $black;
+                color: $black;
+                background-color: $light;
+                box-shadow: 0 0 2px 2px $light;
+            }
         }
     }
     .form-select{
@@ -68,18 +110,31 @@ form{
             color: $black;
         }
     }
-    .labelIcon{
+    // Icon
+    .labelIconLeft,.labelIconRight{
         position: relative;
         z-index: 0;
-        label{
+        i{
             position: absolute;
-            top: 1.3rem;
-            left: 1.5rem;
-            z-index: 1;
+            top: 1.9rem;
             font-size: 2rem;
+            z-index: 1;
         }
+    }
+    .labelIconLeft{
         input{
-            padding-left: 5rem!important;
+            padding-left: 4.5rem!important;
+        }
+        i{
+            left: 1.5rem;
+        }
+    }
+    .labelIconRight{
+        input{
+            padding-right: 4.5rem!important;
+        }
+        i{
+            right: 1.5rem;
         }
     }
     .selectIcon{
@@ -102,21 +157,6 @@ form{
         &:after{
             content: "\f0dd";
             bottom: 1.2rem;
-        }
-    }
-    .cardNumber{
-        position: relative;
-        z-index: 0;
-        &:after{
-            font-family: "Font Awesome 6 Free";
-            content: "\f09d";
-            position: absolute;
-            display: inline-block;
-            bottom: 1.4rem;
-            right: 1rem;
-            z-index: 1;
-            color: $black;
-            font-size: 2rem;
         }
     }
 }

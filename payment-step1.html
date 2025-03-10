@@ -72,6 +72,7 @@
     <main>
         <div class="container-md col-xl-10 col-xxl-9 row detailInner mx-auto px-0 px-md-5 py-0 mb-md-5 pb-md-5">
             <div class="col-md-7 px-0 px-md-3">
+                <!-- 表單form -->
                 <form method="post" action="">
                     <div class="bg-black p-4 p-md-5 text-light">
                         <!-- 標題 -->
@@ -98,18 +99,18 @@
                         </div>
                         <!-- 電話 -->
                         <div class="mb-4">
-                            <label for="phoneNumber" class="form-label fs-2 fw-bold">電話</label>
-                            <input type="tel" class="form-control" id="phoneNumber" placeholder="0912-345-678" pattern="09\d{2}-\d{3}-\d{3}" inputmode="numeric" maxlength="12">
+                            <label for="tel" class="form-label fs-2 fw-bold">電話</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="0912-345-678">
                         </div>
                         <!-- 地址 -->
                         <div>
                             <label for="address" class="form-label fs-2 fw-bold">地址</label>
                             <div class="twzipcode">
                                 <div class="row">
-                                    <div class="col-6 selectIcon">
+                                    <div class="col-6">
                                         <select data-role="county" class="form-select"></select>
                                     </div>
-                                    <div class="col-6 selectIcon">
+                                    <div class="col-6">
                                         <select data-role="district" class="form-select"></select>
                                     </div>
                                 </div>
@@ -118,6 +119,7 @@
                             <input type="text" class="form-control mt-3" id="detailAddress" placeholder="幸福路 520 號" maxlength="50">
                         </div>
                     </div>
+                    <!-- 下一步 -->
                     <input type="submit" value="下一步" class="btn fs-1 btn-warning rounded-0 text-black text-center fw-semibold w-100 p-3">
                 </form>
             </div>

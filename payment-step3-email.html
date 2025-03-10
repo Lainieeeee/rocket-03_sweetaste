@@ -72,6 +72,7 @@
     <main>
         <div class="container-md col-xl-10 col-xxl-9 row detailInner mx-auto px-0 px-md-5 py-0 mb-md-5 pb-md-5">
             <div class="col-md-7 px-0 px-md-3">
+                <!-- 表單form -->
                 <form method="post" action="">
                     <div class="bg-black p-4 p-md-5 text-light">
                         <!-- 標題 -->
@@ -94,12 +95,12 @@
                                 <a href="payment-step3-email.html" class="btn btn-light fs-2 fw-bold text-black rounded-0 p-4 w-100 border border-light">郵寄發票</a>
                             </div>
                         </div>
-                        <!-- 地址 -->
+                        <!-- 地址/同運送地址 -->
                         <div class="mb-4 position-relative">
                             <!-- 同運送地址 -->
-                            <div class="form-check d-flex justify-content-start align-items-center position-absolute top-0 end-0">
-                                <input class="form-check-input" type="checkbox" id="sameAddress">
-                                <label class="form-check-label ps-3 fw-semibold cursor-pointer" for="sameAddress">同運送地址</label>
+                            <div class="form-check d-inline-flex justify-content-start align-items-center mb-4 position-absolute top-0 end-0">
+                                <input class="form-check-input me-3 cursor-pointer" type="checkbox" id="sameAddress">
+                                <label class="form-check-label fs-2 fw-bold cursor-pointer" for="sameAddress">同運送地址</label>
                             </div>
                             <div>
                                 <label for="address" class="form-label fs-2 fw-bold">地址</label>
@@ -118,11 +119,12 @@
                             </div>
                         </div>
                         <!-- 統一編號（選填） -->
-                        <div>
+                        <div class="mb-4">
                             <label for="uniformNumber" class="form-label fs-2 fw-bold">統一編號（選填）</label>
                             <input type="text" class="form-control" id="uniformNumber" placeholder="12345678" pattern="^\d{8,10}$" maxlength="10">
                         </div>
                     </div>
+                    <!-- 確認結帳 -->
                     <input type="submit" value="確認結帳" class="btn fs-1 btn-warning rounded-0 text-black text-center fw-semibold w-100 p-3">
                 </form>
             </div>

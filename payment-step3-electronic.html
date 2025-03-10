@@ -72,6 +72,7 @@
     <main>
         <div class="container-md col-xl-10 col-xxl-9 row detailInner mx-auto px-0 px-md-5 py-0 mb-md-5 pb-md-5">
             <div class="col-md-7 px-0 px-md-3">
+                <!-- 表單form -->
                 <form method="post" action="">
                     <div class="bg-black p-4 p-md-5 text-light">
                         <!-- 標題 -->
@@ -96,8 +97,8 @@
                         </div>
                         <!-- 電子郵件信箱 -->
                         <div class="mb-4">
-                            <label for="exampleFormControlInput1" class="form-label fs-2 fw-bold">電子郵件信箱</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example@email.com">
+                            <label for="email" class="form-label">電子郵件信箱</label>
+                            <input type="email" class="form-control" id="email" placeholder="example@email.com">
                         </div>
                         <!-- 統一編號（選填） -->
                         <div>
@@ -105,6 +106,7 @@
                             <input type="text" class="form-control" id="uniformNumber" placeholder="12345678" pattern="^\d{8,10}$" maxlength="10">
                         </div>
                     </div>
+                    <!-- 確認結帳 -->
                     <input type="submit" value="確認結帳" class="btn fs-1 btn-warning rounded-0 text-black text-center fw-semibold w-100 p-3">
                 </form>
             </div>
